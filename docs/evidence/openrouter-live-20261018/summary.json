@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "pluginVersion": "0.6.0-dev.0",
+  "state": "partial-pass",
+  "modelRequests": 8,
+  "decisionRequests": 5,
+  "generationRequests": 3,
+  "allHttp200": true,
+  "cumulativeInputBytes": 37745,
+  "cumulativeResponseBytes": 7808,
+  "limits": {
+    "maxRequests": 10,
+    "maxOutputTokens": 128,
+    "maxDurationMs": 90000,
+    "maxInputBytes": 300000,
+    "maxResponseBytes": 262144,
+    "maxStepsPerCase": 3
+  },
+  "keyReportedUsageDeltaUSD": 0.000236892,
+  "quality": "not-qualified",
+  "calibration": "not-qualified",
+  "samples": [
+    {
+      "id": "text-connectivity",
+      "outcome": "succeeded",
+      "textMatch": false,
+      "steps": 1,
+      "toolCalls": 0,
+      "toolMatches": 0,
+      "manualReplies": 0,
+      "tiers": [
+        "low"
+      ],
+      "approvalOutcomes": []
+    },
+    {
+      "id": "mcp-continuation",
+      "outcome": "succeeded",
+      "textMatch": true,
+      "steps": 2,
+      "toolCalls": 1,
+      "toolMatches": 1,
+      "manualReplies": 1,
+      "tiers": [
+        "low",
+        "low"
+      ],
+      "approvalOutcomes": [
+        "manual-required"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+$ bun script/test.ts --test-name-pattern "qualification exercises|qualification keeps quoted" --rerun-each "10" --randomize "--seed=721905"
+bun test v1.4.2 (744846f84)
+
+test/evidence.test.ts: (run #1)
+
+test/evidence.test.ts: (run #2)
+
+test/evidence.test.ts: (run #3)
+
+test/evidence.test.ts: (run #4)
+
+test/evidence.test.ts: (run #5)
+
+test/evidence.test.ts: (run #6)
+
+test/evidence.test.ts: (run #7)
+
+test/evidence.test.ts: (run #8)
+
+test/evidence.test.ts: (run #9)
+
+test/evidence.test.ts: (run #10)
+
+test/routing.test.ts: (run #1)
+
+test/routing.test.ts: (run #2)
+
+test/routing.test.ts: (run #3)
+
+test/routing.test.ts: (run #4)
+
+test/routing.test.ts: (run #5)
+
+test/routing.test.ts: (run #6)
+
+test/routing.test.ts: (run #7)
+
+test/routing.test.ts: (run #8)
+
+test/routing.test.ts: (run #9)
+
+test/routing.test.ts: (run #10)
+
+test/lifecycle.test.ts: (run #1)
+
+test/lifecycle.test.ts: (run #2)
+
+test/lifecycle.test.ts: (run #3)
+
+test/lifecycle.test.ts: (run #4)
+
+test/lifecycle.test.ts: (run #5)
+
+test/lifecycle.test.ts: (run #6)
+
+test/lifecycle.test.ts: (run #7)
+
+test/lifecycle.test.ts: (run #8)
+
+test/lifecycle.test.ts: (run #9)
+
+test/lifecycle.test.ts: (run #10)
+
+test/qualification.test.ts: (run #1)
+(pass) qualification keeps quoted output as a failure and records only comparison diagnostics [795.44ms]
+(pass) qualification exercises native routing, generation and usage without qualifying fixture quality [339.13ms]
+
+test/qualification.test.ts: (run #2)
+(pass) qualification keeps quoted output as a failure and records only comparison diagnostics [347.71ms]
+(pass) qualification exercises native routing, generation and usage without qualifying fixture quality [307.55ms]
+
+test/qualification.test.ts: (run #3)
+(pass) qualification keeps quoted output as a failure and records only comparison diagnostics [331.05ms]
+(pass) qualification exercises native routing, generation and usage without qualifying fixture quality [320.85ms]
+
+test/qualification.test.ts: (run #4)
+(pass) qualification keeps quoted output as a failure and records only comparison diagnostics [309.84ms]
+(pass) qualification exercises native routing, generation and usage without qualifying fixture quality [303.51ms]
+
+test/qualification.test.ts: (run #5)
+(pass) qualification keeps quoted output as a failure and records only comparison diagnostics [471.03ms]
+(pass) qualification exercises native routing, generation and usage without qualifying fixture quality [537.38ms]
+
+test/qualification.test.ts: (run #6)
+(pass) qualification keeps quoted output as a failure and records only comparison diagnostics [310.01ms]
+(pass) qualification exercises native routing, generation and usage without qualifying fixture quality [311.19ms]
+
+test/qualification.test.ts: (run #7)
+(pass) qualification keeps quoted output as a failure and records only comparison diagnostics [295.77ms]
+(pass) qualification exercises native routing, generation and usage without qualifying fixture quality [287.03ms]
+
+test/qualification.test.ts: (run #8)
+(pass) qualification keeps quoted output as a failure and records only comparison diagnostics [292.86ms]
+(pass) qualification exercises native routing, generation and usage without qualifying fixture quality [280.07ms]
+
+test/qualification.test.ts: (run #9)
+(pass) qualification keeps quoted output as a failure and records only comparison diagnostics [298.89ms]
+(pass) qualification exercises native routing, generation and usage without qualifying fixture quality [286.36ms]
+
+test/qualification.test.ts: (run #10)
+(pass) qualification keeps quoted output as a failure and records only comparison diagnostics [283.32ms]
+(pass) qualification exercises native routing, generation and usage without qualifying fixture quality [271.64ms]
+
+test/tui.test.tsx: (run #1)
+
+test/tui.test.tsx: (run #2)
+
+test/tui.test.tsx: (run #3)
+
+test/tui.test.tsx: (run #4)
+
+test/tui.test.tsx: (run #5)
+
+test/tui.test.tsx: (run #6)
+
+test/tui.test.tsx: (run #7)
+
+test/tui.test.tsx: (run #8)
+
+test/tui.test.tsx: (run #9)
+
+test/tui.test.tsx: (run #10)
+
+test/policies.test.ts: (run #1)
+
+test/policies.test.ts: (run #2)
+
+test/policies.test.ts: (run #3)
+
+test/policies.test.ts: (run #4)
+
+test/policies.test.ts: (run #5)
+
+test/policies.test.ts: (run #6)
+
+test/policies.test.ts: (run #7)
+
+test/policies.test.ts: (run #8)
+
+test/policies.test.ts: (run #9)
+
+test/policies.test.ts: (run #10)
+
+test/package.test.ts: (run #1)
+
+test/package.test.ts: (run #2)
+
+test/package.test.ts: (run #3)
+
+test/package.test.ts: (run #4)
+
+test/package.test.ts: (run #5)
+
+test/package.test.ts: (run #6)
+
+test/package.test.ts: (run #7)
+
+test/package.test.ts: (run #8)
+
+test/package.test.ts: (run #9)
+
+test/package.test.ts: (run #10)
+
+ --seed=721905
+ 20 pass
+ 1240 filtered out
+ 0 fail
+ 140 expect() calls
+Ran 20 tests across 7 files. [20.05s]

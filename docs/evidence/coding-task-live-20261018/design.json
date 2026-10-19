@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "task": "Repair an isolated CSV-to-JSON CLI project; a realistic coding task fixture, not a production bug or benchmark qualification.",
+  "arms": [
+    "baseline",
+    "self-driving"
+  ],
+  "order": "baseline then self-driving; one run per arm; no paid reruns or post-result tuning",
+  "baseline": "No self-driving plugin; fixed native openrouter/openai/gpt-4.1-mini",
+  "experiment": "Existing native Jev choice and five-tier pool, plugin enabled; contextSelection=inherit, approval=off",
+  "maxRequestsTotal": 54,
+  "maxStepsPerArm": 18,
+  "maxDurationMsPerArm": 360000,
+  "maxOutputTokensPerGeneration": 2048,
+  "qualityGate": "16 independent acceptance cases; visible test success and frozen non-implementation files checked separately",
+  "acceptanceSha256": "3cac1d7d3d0bbf0da5f344326018361da841a8816dcf3e78677bc38bb4e8a522",
+  "fixtureHashes": {
+    "README.md": "192a2ef929ce22377d0b2d2eeac43e7200d419eb484ee271aaebad87a76e7a01",
+    "invalid.csv": "17a373d8a99cbc0238d1b1b87088915e04040adec99d3605d930099ee4f42df0",
+    "sample.csv": "8531b5894971a7496024dd796598a1a72bd58d01654ec53214a75cd4f3f9c6b6",
+    "src/cli.ts": "30c03926f9cbca76249cf09b1664ca83e7978e888bb729e2deceeffb6b61d58e",
+    "src/csv.ts": "f8b21dcc55b6b776641be4ecafbed30de6791c838a10a7cddd67610d43162525",
+    "src/import.ts": "546f17bc50d7d0f7d05126bb06d8f47e1929b913d09d6ae00e7ea641d1aaa651",
+    "test/csv.test.ts.txt": "d3fe2eddcea38e062aae366ccd7b7c4a7b7a1042773451fa58e27d9012c2d206"
+  },
+  "credentialHandling": "Public credential.create into temporary SDK DB; remove key from worker environment before tools; destroy isolated DB and environment after each worker.",
+  "limitations": [
+    "One task and one run per arm; no statistical success-rate or production-quality claims.",
+    "No isolated measurement of resource selection or automatic tool approval.",
+    "Raw provider request/response bodies and credentials are not retained.",
+    "Session catalog cost is an estimate, excludes decision-service cost, and cannot establish total USD savings."
+  ],
+  "workerSha256": "a8c072fa7af6e8d64ca7c03f01a7c2ecba616ab5bf3b7cad0df51b1f0b4a3e5f"
+}

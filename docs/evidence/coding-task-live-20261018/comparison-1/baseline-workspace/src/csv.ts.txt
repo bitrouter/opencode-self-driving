@@ -1,0 +1,103 @@
+export function parseCsv(text: string): string[][] {
+  if (text.length === 0) return []
+
+  let pos = 0
+  const rows: string[][] = []
+
+  // Strip optional BOM
+  if (text.charCodeAt(0) === 0xFEFF) {
+    pos = 1
+  }
+
+  const len = text.length
+  let row: string[] = []
+  let field = ''
+  let inQuotes = false
+  let i = pos
+
+  function pushField() {
+    row.push(field)
+    field = ''
+  }
+
+  function pushRow() {
+    rows.push(row)
+    row = []
+  }
+
+  while (i < len) {
+    const c = text[i]
+
+    if (inQuotes) {
+      if (c === '"') {
+        // Peek next char for escaped quote
+        if (i + 1 < len && text[i + 1] === '"') {
+          field += '"'
+          i += 2
+          continue
+        } else {
+          // Closing quote
+          inQuotes = false
+          i++
+          // After closing quote must be comma, newline, or end
+          const nextChar = i < len ? text[i] : '\n'
+          if (nextChar !== ',' && nextChar !== '\n' && nextChar !== '\r') {
+            throw new Error('Invalid character after closing quote')
+          }
+          continue
+        }
+      } else {
+        // Normal char inside quoted field (include CR)
+        field += c
+        i++
+        continue
+      }
+    } else {
+      // Not in quotes
+      if (c === ',') {
+        pushField()
+        i++
+        continue
+      } else if (c === '\n') {
+        // End of row
+        pushField()
+        pushRow()
+        i++
+        continue
+      } else if (c === '\r') {
+        // Must be CRLF
+        if (i + 1 < len && text[i + 1] === '\n') {
+          pushField()
+          pushRow()
+          i += 2
+          continue
+        } else {
+          throw new Error('Bare CR outside quoted field')
+        }
+      } else if (c === '"') {
+        if (field.length !== 0) {
+          throw new Error('Quote must start a field')
+        }
+        inQuotes = true
+        i++
+        continue
+      } else {
+        // Normal char
+        if (c === '\r') {
+          throw new Error('Bare CR outside quoted field')
+        }
+        field += c
+        i++
+        continue
+      }
+    }
+  }
+
+  // Handle trailing record at end of input
+  if (row.length !== 0 || field.length !== 0) {
+    pushField()
+    pushRow()
+  }
+
+  return rows
+}

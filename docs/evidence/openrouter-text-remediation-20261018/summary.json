@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "maxRequestsTotal": 18,
+  "actualRequestsTotal": 18,
+  "requestKinds": {
+    "decision": 12,
+    "generation": 6
+  },
+  "allHTTP200": true,
+  "planDifferencesAudited": true,
+  "groups": {
+    "baseline": {
+      "runs": 2,
+      "exactMatches": 0
+    },
+    "explicit-prompt": {
+      "runs": 2,
+      "exactMatches": 2
+    },
+    "fixed-mini": {
+      "runs": 2,
+      "exactMatches": 2
+    }
+  },
+  "samples": [
+    {
+      "id": "baseline-1",
+      "group": "baseline",
+      "planHash": "da06f9b2684cf1f9c3cc1c9ac82840bfcd5919ee8459cfa94f81ba9dc9b686b3",
+      "state": "incomplete",
+      "outcome": "succeeded",
+      "textMatch": false,
+      "textComparison": {
+        "assistantPresent": true,
+        "textParts": 1,
+        "actualLength": 96,
+        "expectedLength": 18,
+        "actualSha256": "778f2e7341121d4213ec21df7ae35a5c22e9cd01934dff60af957f33d8a09540",
+        "expectedSha256": "b0cc1d0c50f40d087a3f5315dd071d8ee19f95c71a2e4c7ade1f57a69a6742c0",
+        "firstDifference": {
+          "utf16Offset": 0,
+          "actualCodePoint": 83,
+          "expectedCodePoint": 81
+        }
+      },
+      "physicalModel": "openai/gpt-4.1-nano",
+      "confidence": 0.99,
+      "steps": 1,
+      "providerRequests": 3
+    },
+    {
+      "id": "explicit-prompt-1",
+      "group": "explicit-prompt",
+      "planHash": "3c3dc01f3dbc6b5dea218a5f5053d6dee1400a62a7b31b2f93fb309eb848748d",
+      "state": "completed",
+      "outcome": "succeeded",
+      "textMatch": true,
+      "textComparison": {
+        "assistantPresent": true,
+        "textParts": 1,
+        "actualLength": 18,
+        "expectedLength": 18,
+        "actualSha256": "b0cc1d0c50f40d087a3f5315dd071d8ee19f95c71a2e4c7ade1f57a69a6742c0",
+        "expectedSha256": "b0cc1d0c50f40d087a3f5315dd071d8ee19f95c71a2e4c7ade1f57a69a6742c0"
+      },
+      "physicalModel": "openai/gpt-4.1-nano",
+      "confidence": 0.99,
+      "steps": 1,
+      "providerRequests": 3
+    },
+    {
+      "id": "fixed-mini-1",
+      "group": "fixed-mini",
+      "planHash": "29615a8c0345a59159b08ff54401ea84dba93cbb3975eb69a8c58f2283b2f68e",
+      "state": "completed",
+      "outcome": "succeeded",
+      "textMatch": true,
+      "textComparison": {
+        "assistantPresent": true,
+        "textParts": 1,
+        "actualLength": 18,
+        "expectedLength": 18,
+        "actualSha256": "b0cc1d0c50f40d087a3f5315dd071d8ee19f95c71a2e4c7ade1f57a69a6742c0",
+        "expectedSha256": "b0cc1d0c50f40d087a3f5315dd071d8ee19f95c71a2e4c7ade1f57a69a6742c0"
+      },
+      "physicalModel": "openai/gpt-4.1-mini",
+      "confidence": 0.99,
+      "steps": 1,
+      "providerRequests": 3
+    },
+    {
+      "id": "baseline-2",
+      "group": "baseline",
+      "planHash": "4888df67d0caede5dbea34032eea7198c53bddaedabeb6181ee744b18b853cf2",
+      "state": "incomplete",
+      "outcome": "succeeded",
+      "textMatch": false,
+      "textComparison": {
+        "assistantPresent": true,
+        "textParts": 1,
+        "actualLength": 95,
+        "expectedLength": 18,
+        "actualSha256": "b375aef768b8e8f36dbba066268fa9c1839281c700402d43be6564a15c5fd2d7",
+        "expectedSha256": "b0cc1d0c50f40d087a3f5315dd071d8ee19f95c71a2e4c7ade1f57a69a6742c0",
+        "firstDifference": {
+          "utf16Offset": 0,
+          "actualCodePoint": 80,
+          "expectedCodePoint": 81
+        }
+      },
+      "physicalModel": "openai/gpt-4.1-nano",
+      "confidence": 0.99,
+      "steps": 1,
+      "providerRequests": 3
+    },
+    {
+      "id": "explicit-prompt-2",
+      "group": "explicit-prompt",
+      "planHash": "561ba774fce9bcbc7881a0710dc6b8dbe9872c578509bb0100ba5f138dd994ba",
+      "state": "completed",
+      "outcome": "succeeded",
+      "textMatch": true,
+      "textComparison": {
+        "assistantPresent": true,
+        "textParts": 1,
+        "actualLength": 18,
+        "expectedLength": 18,
+        "actualSha256": "b0cc1d0c50f40d087a3f5315dd071d8ee19f95c71a2e4c7ade1f57a69a6742c0",
+        "expectedSha256": "b0cc1d0c50f40d087a3f5315dd071d8ee19f95c71a2e4c7ade1f57a69a6742c0"
+      },
+      "physicalModel": "openai/gpt-4.1-nano",
+      "confidence": 0.99,
+      "steps": 1,
+      "providerRequests": 3
+    },
+    {
+      "id": "fixed-mini-2",
+      "group": "fixed-mini",
+      "planHash": "4a004b9baf8d377f2c84837b3282f5bf4f55de308448af730e858840204fff6a",
+      "state": "completed",
+      "outcome": "succeeded",
+      "textMatch": true,
+      "textComparison": {
+        "assistantPresent": true,
+        "textParts": 1,
+        "actualLength": 18,
+        "expectedLength": 18,
+        "actualSha256": "b0cc1d0c50f40d087a3f5315dd071d8ee19f95c71a2e4c7ade1f57a69a6742c0",
+        "expectedSha256": "b0cc1d0c50f40d087a3f5315dd071d8ee19f95c71a2e4c7ade1f57a69a6742c0"
+      },
+      "physicalModel": "openai/gpt-4.1-mini",
+      "confidence": 0.99,
+      "steps": 1,
+      "providerRequests": 3
+    }
+  ],
+  "quality": "not-qualified",
+  "calibration": "not-qualified",
+  "billing": "not-measured",
+  "runtimeChanged": false,
+  "verification": {
+    "templateCasesDecode": "passed",
+    "planDifferencesAudit": "passed",
+    "hostCheck": {
+      "checkout": "<qualified-opencode-checkout>",
+      "exitCode": 0,
+      "typecheckTasks": 34,
+      "cachedTasks": 34,
+      "lintWarnings": 1306,
+      "lintErrors": 0
+    },
+    "credentialValueScan": {
+      "files": 25,
+      "matches": 0
+    }
+  }
+}

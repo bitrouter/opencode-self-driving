@@ -1,0 +1,13 @@
+bun test v1.4.2 (744846f84)
+
+test/csv.test.ts:
+(pass) imports ordinary records [0.26ms]
+(pass) quoted commas and escaped quotes [0.02ms]
+(pass) preserves embedded newlines [0.02ms]
+(pass) empty input
+(pass) rejects ambiguous headers and mismatched rows [0.07ms]
+
+ 5 pass
+ 0 fail
+ 7 expect() calls
+Ran 5 tests across 1 file. [4.00ms]

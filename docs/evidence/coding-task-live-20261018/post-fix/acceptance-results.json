@@ -1,0 +1,20 @@
+[
+  {
+    "name": "visible",
+    "exitCode": 1,
+    "plannedTests": 5,
+    "executedTests": 0,
+    "passed": 0,
+    "state": "module-load-error",
+    "reason": "Syntax Error in src/csv.ts; no JUnit output emitted by Bun"
+  },
+  {
+    "name": "acceptance",
+    "exitCode": 1,
+    "plannedTests": 16,
+    "executedTests": 0,
+    "passed": 0,
+    "state": "module-load-error",
+    "reason": "Syntax Error in src/csv.ts; acceptance module cannot import task implementation"
+  }
+]

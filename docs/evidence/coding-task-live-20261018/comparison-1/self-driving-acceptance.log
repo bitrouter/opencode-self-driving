@@ -1,0 +1,177 @@
+bun test v1.4.2 (744846f84)
+
+../../../../../../../../../../../private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-ltecyflg/acceptance.test.ts:
+ 5 | if (!directory) throw new Error("CODING_TASK_ROOT is required")
+ 6 | const { parseCsv } = await import(join(directory, "src/csv.ts"))
+ 7 | const { importCsv } = await import(join(directory, "src/import.ts"))
+ 8 |
+ 9 | test("empty file and header-only file", () => {
+10 |   expect(parseCsv("")).toEqual([])
+                            ^
+error: expect(received).toEqual(expected)
+
+- []
++ [
++   [
++     "",
++   ],
++ ]
+
+- Expected  - 1
++ Received  + 5
+
+      at <anonymous> (/private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-ltecyflg/acceptance.test.ts:10:24)
+(fail) empty file and header-only file [0.28ms]
+10 |   expect(parseCsv("")).toEqual([])
+11 |   expect(importCsv("a,b\r\n")).toEqual([])
+12 | })
+13 |
+14 | test("record terminators do not invent a final record", () => {
+15 |   expect(parseCsv("a\n")).toEqual([["a"]])
+                               ^
+error: expect(received).toEqual(expected)
+
+  [
+    [
+      "a",
+    ],
++   [
++     "",
++   ],
+  ]
+
+- Expected  - 0
++ Received  + 3
+
+      at <anonymous> (/private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-ltecyflg/acceptance.test.ts:15:27)
+(fail) record terminators do not invent a final record [0.08ms]
+(pass) empty fields and empty quoted fields [0.02ms]
+3 | export function importCsv(text: string): Record<string, string>[] {
+4 |   const [headers, ...rows] = parseCsv(text)
+5 |   if (!headers || headers.length === 0) return []
+6 |   return rows.map((row) => {
+7 |     if (row.length !== headers.length) {
+8 |       throw new Error("Data row has different number of fields than headers")
+                                                                                ^
+error: Data row has different number of fields than headers
+      at <anonymous> (<opencode-checkout>/opencode-self-driving/artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/self-driving-workspace/src/import.ts:8:77)
+      at map (1:11)
+      at <anonymous> (/private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-ltecyflg/acceptance.test.ts:26:10)
+(fail) field whitespace is preserved [0.09ms]
+(pass) quoted delimiters and escaped quotation marks
+32 |             field += char;
+33 |           }
+34 |         }
+35 |       }
+36 |       if (inQuotes) {
+37 |         throw new Error('Unterminated quoted field');
+                                                        ^
+error: Unterminated quoted field
+      at <anonymous> (<opencode-checkout>/opencode-self-driving/artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/self-driving-workspace/src/csv.ts:37:52)
+      at map (1:11)
+      at <anonymous> (/private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-ltecyflg/acceptance.test.ts:34:10)
+(fail) quoted newlines preserve their bytes [0.03ms]
+33 | test("quoted newlines preserve their bytes", () => {
+34 |   expect(parseCsv('a,"b\nc\r\nd\re",f\r\n')).toEqual([["a", "b\nc\r\nd\re", "f"]])
+35 | })
+36 |
+37 | test("only the leading BOM is stripped", () => {
+38 |   expect(parseCsv('\uFEFFa,"\uFEFFb"\n')).toEqual([["a", "\uFEFFb"]])
+                                               ^
+error: expect(received).toEqual(expected)
+
+  [
+    [
+      "a",
+      "﻿b",
+    ],
++   [
++     "",
++   ],
+  ]
+
+- Expected  - 0
++ Received  + 3
+
+      at <anonymous> (/private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-ltecyflg/acceptance.test.ts:38:43)
+(fail) only the leading BOM is stripped [0.05ms]
+(pass) unterminated quoted field is rejected [0.02ms]
+42 | test("unterminated quoted field is rejected", () => {
+43 |   expect(() => parseCsv('a,"unterminated')).toThrow(Error)
+44 | })
+45 |
+46 | test("quotes in unquoted fields are rejected", () => {
+47 |   expect(() => parseCsv('ab"cd,e')).toThrow(Error)
+                                         ^
+error: expect(received).toThrow(expected)
+
+Expected constructor: Error
+
+Received function did not throw
+Received value: [
+  [ "ab\"cd", "e" ]
+]
+
+      at <anonymous> (/private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-ltecyflg/acceptance.test.ts:47:37)
+(fail) quotes in unquoted fields are rejected [0.07ms]
+46 | test("quotes in unquoted fields are rejected", () => {
+47 |   expect(() => parseCsv('ab"cd,e')).toThrow(Error)
+48 | })
+49 |
+50 | test("characters after closing quote are rejected", () => {
+51 |   expect(() => parseCsv('"abc"x,def')).toThrow(Error)
+                                            ^
+error: expect(received).toThrow(expected)
+
+Expected constructor: Error
+
+Received function did not throw
+Received value: [
+  [ "abcx", "def" ]
+]
+
+      at <anonymous> (/private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-ltecyflg/acceptance.test.ts:51:40)
+(fail) characters after closing quote are rejected [0.03ms]
+(pass) bare CR outside quotes is rejected [0.01ms]
+55 | test("bare CR outside quotes is rejected", () => {
+56 |   expect(() => parseCsv("a\rb")).toThrow(Error)
+57 | })
+58 |
+59 | test("duplicate and empty headers are rejected", () => {
+60 |   expect(() => importCsv("a,a\n1,2")).toThrow(Error)
+                                           ^
+error: expect(received).toThrow(expected)
+
+Expected constructor: Error
+
+Received function did not throw
+Received value: [
+  {
+    a: "2",
+  }
+]
+
+      at <anonymous> (/private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-ltecyflg/acceptance.test.ts:60:39)
+(fail) duplicate and empty headers are rejected [0.04ms]
+(pass) both short and long records are rejected [0.01ms]
+(pass) special header names are ordinary own properties [0.02ms]
+79 |     cwd: directory,
+80 |     stdout: "pipe",
+81 |     stderr: "pipe",
+82 |   })
+83 |   const [exit, output] = await Promise.all([process.exited, new Response(process.stdout).text()])
+84 |   expect(exit).toBe(0)
+                    ^
+error: expect(received).toBe(expected)
+
+Expected: 0
+Received: 1
+
+      at <anonymous> (/private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-ltecyflg/acceptance.test.ts:84:16)
+(fail) CLI imports a multiline file [6.51ms]
+(pass) CLI rejects malformed CSV [6.00ms]
+
+ 7 pass
+ 9 fail
+ 20 expect() calls
+Ran 16 tests across 1 file. [32.00ms]

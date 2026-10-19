@@ -1,0 +1,350 @@
+bun test v1.4.2 (744846f84)
+
+../../../../../../../../../../private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-x9jvel5g/acceptance.test.ts:
+ 5 | if (!directory) throw new Error("CODING_TASK_ROOT is required")
+ 6 | const { parseCsv } = await import(join(directory, "src/csv.ts"))
+ 7 | const { importCsv } = await import(join(directory, "src/import.ts"))
+ 8 |
+ 9 | test("empty file and header-only file", () => {
+10 |   expect(parseCsv("")).toEqual([])
+                            ^
+error: expect(received).toEqual(expected)
+
+- []
++ [
++   [
++     "",
++   ],
++ ]
+
+- Expected  - 1
++ Received  + 5
+
+      at <anonymous> (/private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-x9jvel5g/acceptance.test.ts:10:24)
+(fail) empty file and header-only file [0.54ms]
+11 |   expect(importCsv("a,b\r\n")).toEqual([])
+12 | })
+13 |
+14 | test("record terminators do not invent a final record", () => {
+15 |   expect(parseCsv("a\n")).toEqual([["a"]])
+16 |   expect(parseCsv("a\n\n")).toEqual([["a"], [""]])
+                                 ^
+error: expect(received).toEqual(expected)
+
+  [
+    [
+      "a",
+    ],
+-   [
+-     "",
+-   ],
+  ]
+
+- Expected  - 3
++ Received  + 0
+
+      at <anonymous> (/private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-x9jvel5g/acceptance.test.ts:16:29)
+(fail) record terminators do not invent a final record [0.19ms]
+17 |   expect(parseCsv("\n")).toEqual([[""]])
+18 |   expect(parseCsv("\r\n\r\n")).toEqual([[""], [""]])
+19 | })
+20 |
+21 | test("empty fields and empty quoted fields", () => {
+22 |   expect(parseCsv(',"",\r\n,,')).toEqual([["", "", ""], ["", "", ""]])
+                                      ^
+error: expect(received).toEqual(expected)
+
+  [
+    [
+      "",
+-     "",
+-     "",
++     """",
++
++ "
++ "
++ ,
+    ],
+    [
+      "",
+      "",
+      "",
+    ],
+  ]
+
+- Expected  - 2
++ Received  + 5
+
+      at <anonymous> (/private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-x9jvel5g/acceptance.test.ts:22:34)
+(fail) empty fields and empty quoted fields [0.09ms]
+21 | test("empty fields and empty quoted fields", () => {
+22 |   expect(parseCsv(',"",\r\n,,')).toEqual([["", "", ""], ["", "", ""]])
+23 | })
+24 |
+25 | test("field whitespace is preserved", () => {
+26 |   expect(importCsv(' name ,note\n Ada ,"  spaced  "\n')).toEqual([{ " name ": " Ada ", note: "  spaced  " }])
+                                                              ^
+error: expect(received).toEqual(expected)
+
+  [
+    {
+-     " name ": " Ada ",
+-     "note": "  spaced  ",
++     "name ": " Ada ",
++     "note": ""  spaced  "",
+    },
+  ]
+
+- Expected  - 2
++ Received  + 2
+
+      at <anonymous> (/private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-x9jvel5g/acceptance.test.ts:26:58)
+(fail) field whitespace is preserved [0.25ms]
+25 | test("field whitespace is preserved", () => {
+26 |   expect(importCsv(' name ,note\n Ada ,"  spaced  "\n')).toEqual([{ " name ": " Ada ", note: "  spaced  " }])
+27 | })
+28 |
+29 | test("quoted delimiters and escaped quotation marks", () => {
+30 |   expect(parseCsv('"a,b","""quoted""",tail')).toEqual([["a,b", '"quoted"', "tail"]])
+                                                   ^
+error: expect(received).toEqual(expected)
+
+  [
+    [
+-     "a,b",
+-     ""quoted"",
++     ""a",
++     "b"",
++     """"quoted"""",
+      "tail",
+    ],
+  ]
+
+- Expected  - 2
++ Received  + 3
+
+      at <anonymous> (/private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-x9jvel5g/acceptance.test.ts:30:47)
+(fail) quoted delimiters and escaped quotation marks [0.08ms]
+29 | test("quoted delimiters and escaped quotation marks", () => {
+30 |   expect(parseCsv('"a,b","""quoted""",tail')).toEqual([["a,b", '"quoted"', "tail"]])
+31 | })
+32 |
+33 | test("quoted newlines preserve their bytes", () => {
+34 |   expect(parseCsv('a,"b\nc\r\nd\re",f\r\n')).toEqual([["a", "b\nc\r\nd\re", "f"]])
+                                                  ^
+error: expect(received).toEqual(expected)
+
+  [
+    [
+      "a",
++     ""b",
++   ],
++   [
+
+- "b
+- c
+- d
+- e"
++ "c
++ "
++ ,
++   ],
++   [
++
++ "d
++ e""
+  ,
+      "f",
+    ],
+  ]
+
+- Expected  - 4
++ Received  + 11
+
+      at <anonymous> (/private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-x9jvel5g/acceptance.test.ts:34:46)
+(fail) quoted newlines preserve their bytes [0.13ms]
+33 | test("quoted newlines preserve their bytes", () => {
+34 |   expect(parseCsv('a,"b\nc\r\nd\re",f\r\n')).toEqual([["a", "b\nc\r\nd\re", "f"]])
+35 | })
+36 |
+37 | test("only the leading BOM is stripped", () => {
+38 |   expect(parseCsv('\uFEFFa,"\uFEFFb"\n')).toEqual([["a", "\uFEFFb"]])
+                                               ^
+error: expect(received).toEqual(expected)
+
+  [
+    [
+      "a",
+-     "﻿b",
++     ""﻿b"",
+    ],
+  ]
+
+- Expected  - 1
++ Received  + 1
+
+      at <anonymous> (/private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-x9jvel5g/acceptance.test.ts:38:43)
+(fail) only the leading BOM is stripped [0.11ms]
+38 |   expect(parseCsv('\uFEFFa,"\uFEFFb"\n')).toEqual([["a", "\uFEFFb"]])
+39 |   expect(parseCsv("\uFEFF")).toEqual([])
+40 | })
+41 |
+42 | test("unterminated quoted field is rejected", () => {
+43 |   expect(() => parseCsv('a,"unterminated')).toThrow(Error)
+                                                 ^
+error: expect(received).toThrow(expected)
+
+Expected constructor: Error
+
+Received function did not throw
+Received value: [
+  [ "a", "\"unterminated" ]
+]
+
+      at <anonymous> (/private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-x9jvel5g/acceptance.test.ts:43:45)
+(fail) unterminated quoted field is rejected [0.40ms]
+42 | test("unterminated quoted field is rejected", () => {
+43 |   expect(() => parseCsv('a,"unterminated')).toThrow(Error)
+44 | })
+45 |
+46 | test("quotes in unquoted fields are rejected", () => {
+47 |   expect(() => parseCsv('ab"cd,e')).toThrow(Error)
+                                         ^
+error: expect(received).toThrow(expected)
+
+Expected constructor: Error
+
+Received function did not throw
+Received value: [
+  [ "ab\"cd", "e" ]
+]
+
+      at <anonymous> (/private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-x9jvel5g/acceptance.test.ts:47:37)
+(fail) quotes in unquoted fields are rejected [0.07ms]
+46 | test("quotes in unquoted fields are rejected", () => {
+47 |   expect(() => parseCsv('ab"cd,e')).toThrow(Error)
+48 | })
+49 |
+50 | test("characters after closing quote are rejected", () => {
+51 |   expect(() => parseCsv('"abc"x,def')).toThrow(Error)
+                                            ^
+error: expect(received).toThrow(expected)
+
+Expected constructor: Error
+
+Received function did not throw
+Received value: [
+  [ "\"abc\"x", "def" ]
+]
+
+      at <anonymous> (/private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-x9jvel5g/acceptance.test.ts:51:40)
+(fail) characters after closing quote are rejected [0.04ms]
+51 |   expect(() => parseCsv('"abc"x,def')).toThrow(Error)
+52 |   expect(() => parseCsv('"abc" ,def')).toThrow(Error)
+53 | })
+54 |
+55 | test("bare CR outside quotes is rejected", () => {
+56 |   expect(() => parseCsv("a\rb")).toThrow(Error)
+                                      ^
+error: expect(received).toThrow(expected)
+
+Expected constructor: Error
+
+Received function did not throw
+Received value: [
+  [ "a\rb" ]
+]
+
+      at <anonymous> (/private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-x9jvel5g/acceptance.test.ts:56:34)
+(fail) bare CR outside quotes is rejected [0.03ms]
+55 | test("bare CR outside quotes is rejected", () => {
+56 |   expect(() => parseCsv("a\rb")).toThrow(Error)
+57 | })
+58 |
+59 | test("duplicate and empty headers are rejected", () => {
+60 |   expect(() => importCsv("a,a\n1,2")).toThrow(Error)
+                                           ^
+error: expect(received).toThrow(expected)
+
+Expected constructor: Error
+
+Received function did not throw
+Received value: [
+  {
+    a: "2",
+  }
+]
+
+      at <anonymous> (/private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-x9jvel5g/acceptance.test.ts:60:39)
+(fail) duplicate and empty headers are rejected [0.10ms]
+60 |   expect(() => importCsv("a,a\n1,2")).toThrow(Error)
+61 |   expect(() => importCsv(",b\n1,2")).toThrow(Error)
+62 | })
+63 |
+64 | test("both short and long records are rejected", () => {
+65 |   expect(() => importCsv("a,b\n1")).toThrow(Error)
+                                         ^
+error: expect(received).toThrow(expected)
+
+Expected constructor: Error
+
+Received function did not throw
+Received value: [
+  {
+    a: "1",
+    b: "",
+  }
+]
+
+      at <anonymous> (/private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-x9jvel5g/acceptance.test.ts:65:37)
+(fail) both short and long records are rejected [0.03ms]
+(pass) special header names are ordinary own properties [0.03ms]
+80 |     stdout: "pipe",
+81 |     stderr: "pipe",
+82 |   })
+83 |   const [exit, output] = await Promise.all([process.exited, new Response(process.stdout).text()])
+84 |   expect(exit).toBe(0)
+85 |   expect(JSON.parse(output)).toEqual([{ name: "Ada, A.", note: 'line 1\nline "2"' }])
+                                  ^
+error: expect(received).toEqual(expected)
+
+  [
+    {
+-     "name": "Ada, A.",
+-     "note":
+- "line 1
+- line "2""
+- ,
++     "name": ""Ada",
++     "note": " A."",
++   },
++   {
++     "name": "line ""2"""",
++     "note": "",
+    },
+  ]
+
+- Expected  - 5
++ Received  + 6
+
+      at <anonymous> (/private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-x9jvel5g/acceptance.test.ts:85:30)
+(fail) CLI imports a multiline file [13.38ms]
+94 |   const [exit, output, error] = await Promise.all([
+95 |     process.exited,
+96 |     new Response(process.stdout).text(),
+97 |     new Response(process.stderr).text(),
+98 |   ])
+99 |   expect(exit).toBe(1)
+                    ^
+error: expect(received).toBe(expected)
+
+Expected: 1
+Received: 0
+
+      at <anonymous> (/private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-x9jvel5g/acceptance.test.ts:99:16)
+(fail) CLI rejects malformed CSV [12.87ms]
+
+ 1 pass
+ 15 fail
+ 21 expect() calls
+Ran 16 tests across 1 file. [102.00ms]

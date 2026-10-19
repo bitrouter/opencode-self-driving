@@ -1,0 +1,696 @@
+{
+  "schemaVersion": 1,
+  "arm": "self-driving",
+  "mode": "execute",
+  "planHash": "6b1778bf3406bebda8d262bc27074c43b608f9a334bdd9713c9efa18c9de23f5",
+  "state": "succeeded",
+  "stage": "session",
+  "elapsedMs": 15151.968166999999,
+  "steps": 7,
+  "permissionRequests": 0,
+  "toolFailures": 1,
+  "availableTools": [
+    "edit",
+    "read",
+    "shell",
+    "write"
+  ],
+  "routes": [
+    {
+      "id": "1424dcc6-57a5-4655-a006-eae52dc8efc8",
+      "sessionID": "ses_eae060ab0ffdwBW3Aor9aOIouv",
+      "revision": "bb488585-f7c1-4032-8415-8fb25d0750c8",
+      "capacityRevision": "f9ac060a99dc0c96726d378e84bfa6fa8f8c72492b266e8ba0e9aeded211260c",
+      "kind": "primary",
+      "selection": "decision",
+      "tier": "medium",
+      "eligibleTiers": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "excluded": [],
+      "backend": "coding",
+      "model": "openai/gpt-4o-mini",
+      "physicalModel": "openai/gpt-4o-mini",
+      "inputEstimate": 11248,
+      "outputTokens": 2048,
+      "resources": {
+        "mode": "inherit",
+        "outcome": "inherited",
+        "viewRevision": "d5087cd4999358290d2a4e6870d71f2cc4ca6bafcce0f547ef2c60053005cc94",
+        "units": [],
+        "omitted": [],
+        "proposed": [],
+        "probabilities": {}
+      },
+      "decision": {
+        "service": "openrouter",
+        "requestedModel": "typesafe/jev-1.14",
+        "responseModel": "typesafe/jev-1.14-20261014",
+        "probabilities": {
+          "low": 0.33,
+          "medium": 0.45,
+          "high": 0.21,
+          "xhigh": 0,
+          "max": 0.01
+        },
+        "confidence": 0.31,
+        "inputTokens": 5284,
+        "outputTokens": 53,
+        "evidenceBytes": 12963,
+        "omitted": []
+      },
+      "generationUsage": {
+        "inputTokens": 1768,
+        "outputTokens": 47
+      }
+    },
+    {
+      "id": "e1ac9467-83e6-4947-8dde-4ee887c34966",
+      "sessionID": "ses_eae060ab0ffdwBW3Aor9aOIouv",
+      "revision": "bb488585-f7c1-4032-8415-8fb25d0750c8",
+      "capacityRevision": "f9ac060a99dc0c96726d378e84bfa6fa8f8c72492b266e8ba0e9aeded211260c",
+      "kind": "primary",
+      "selection": "decision",
+      "tier": "low",
+      "eligibleTiers": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "excluded": [],
+      "backend": "coding",
+      "model": "openai/gpt-4.1-nano",
+      "physicalModel": "openai/gpt-4.1-nano",
+      "inputEstimate": 12244,
+      "outputTokens": 2048,
+      "resources": {
+        "mode": "inherit",
+        "outcome": "inherited",
+        "viewRevision": "fcb3e8f77ff3bb4e21286331738b8a9a2c9ca502b3731efdbd18dc9fde6b6de9",
+        "units": [],
+        "omitted": [],
+        "proposed": [],
+        "probabilities": {}
+      },
+      "decision": {
+        "service": "openrouter",
+        "requestedModel": "typesafe/jev-1.14",
+        "responseModel": "typesafe/jev-1.14-20261014",
+        "probabilities": {
+          "low": 0.45,
+          "medium": 0.37,
+          "high": 0.18,
+          "xhigh": 0,
+          "max": 0
+        },
+        "confidence": 0.31,
+        "inputTokens": 5824,
+        "outputTokens": 53,
+        "evidenceBytes": 14158,
+        "omitted": []
+      },
+      "generationUsage": {
+        "inputTokens": 1969,
+        "outputTokens": 379
+      }
+    },
+    {
+      "id": "efccf608-c74b-4e79-86a8-eaf8bfe39b27",
+      "sessionID": "ses_eae060ab0ffdwBW3Aor9aOIouv",
+      "revision": "bb488585-f7c1-4032-8415-8fb25d0750c8",
+      "capacityRevision": "f9ac060a99dc0c96726d378e84bfa6fa8f8c72492b266e8ba0e9aeded211260c",
+      "kind": "primary",
+      "selection": "decision",
+      "tier": "low",
+      "eligibleTiers": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "excluded": [],
+      "backend": "coding",
+      "model": "openai/gpt-4.1-nano",
+      "physicalModel": "openai/gpt-4.1-nano",
+      "inputEstimate": 14094,
+      "outputTokens": 2048,
+      "resources": {
+        "mode": "inherit",
+        "outcome": "inherited",
+        "viewRevision": "f0539532713549d8aa0410431ddbb739953e51586face105a14e5333dcc06ea2",
+        "units": [],
+        "omitted": [],
+        "proposed": [],
+        "probabilities": {}
+      },
+      "decision": {
+        "service": "openrouter",
+        "requestedModel": "typesafe/jev-1.14",
+        "responseModel": "typesafe/jev-1.14-20261014",
+        "probabilities": {
+          "low": 0.37,
+          "medium": 0.35,
+          "high": 0.27,
+          "xhigh": 0,
+          "max": 0.01
+        },
+        "confidence": 0.21,
+        "inputTokens": 6391,
+        "outputTokens": 53,
+        "evidenceBytes": 16044,
+        "omitted": []
+      },
+      "generationUsage": {
+        "inputTokens": 2361,
+        "outputTokens": 44
+      }
+    },
+    {
+      "id": "0bd5df14-68f0-4b3f-b9aa-0fce9c3ef273",
+      "sessionID": "ses_eae060ab0ffdwBW3Aor9aOIouv",
+      "revision": "bb488585-f7c1-4032-8415-8fb25d0750c8",
+      "capacityRevision": "f9ac060a99dc0c96726d378e84bfa6fa8f8c72492b266e8ba0e9aeded211260c",
+      "kind": "primary",
+      "selection": "decision",
+      "tier": "medium",
+      "eligibleTiers": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "excluded": [],
+      "backend": "coding",
+      "model": "openai/gpt-4o-mini",
+      "physicalModel": "openai/gpt-4o-mini",
+      "inputEstimate": 14593,
+      "outputTokens": 2048,
+      "resources": {
+        "mode": "inherit",
+        "outcome": "inherited",
+        "viewRevision": "9480b8d42ae052e6096856b36157c61a87b171d7dc64849583ffd93c2c15b606",
+        "units": [],
+        "omitted": [],
+        "proposed": [],
+        "probabilities": {}
+      },
+      "decision": {
+        "service": "openrouter",
+        "requestedModel": "typesafe/jev-1.14",
+        "responseModel": "typesafe/jev-1.14-20261014",
+        "probabilities": {
+          "low": 0.32,
+          "medium": 0.39,
+          "high": 0.28,
+          "xhigh": 0,
+          "max": 0.01
+        },
+        "confidence": 0.24,
+        "inputTokens": 6682,
+        "outputTokens": 53,
+        "evidenceBytes": 16625,
+        "omitted": []
+      },
+      "generationUsage": {
+        "inputTokens": 2480,
+        "outputTokens": 250
+      }
+    },
+    {
+      "id": "db1e269a-62ca-4cc9-ad36-493f8500c66e",
+      "sessionID": "ses_eae060ab0ffdwBW3Aor9aOIouv",
+      "revision": "bb488585-f7c1-4032-8415-8fb25d0750c8",
+      "capacityRevision": "f9ac060a99dc0c96726d378e84bfa6fa8f8c72492b266e8ba0e9aeded211260c",
+      "kind": "primary",
+      "selection": "decision",
+      "tier": "medium",
+      "eligibleTiers": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "excluded": [],
+      "backend": "coding",
+      "model": "openai/gpt-4o-mini",
+      "physicalModel": "openai/gpt-4o-mini",
+      "inputEstimate": 15972,
+      "outputTokens": 2048,
+      "resources": {
+        "mode": "inherit",
+        "outcome": "inherited",
+        "viewRevision": "576e0624ea1499ecdcc7c011c70222f4c22eef6e37e601781b4e0d2121c6bc6d",
+        "units": [],
+        "omitted": [],
+        "proposed": [],
+        "probabilities": {}
+      },
+      "decision": {
+        "service": "openrouter",
+        "requestedModel": "typesafe/jev-1.14",
+        "responseModel": "typesafe/jev-1.14-20261014",
+        "probabilities": {
+          "low": 0.35,
+          "medium": 0.43,
+          "high": 0.21,
+          "xhigh": 0,
+          "max": 0.01
+        },
+        "confidence": 0.29,
+        "inputTokens": 7289,
+        "outputTokens": 53,
+        "evidenceBytes": 18169,
+        "omitted": []
+      },
+      "generationUsage": {
+        "inputTokens": 2759,
+        "outputTokens": 57
+      }
+    },
+    {
+      "id": "aefe14e1-6c2a-486c-996a-8af7d3349dc9",
+      "sessionID": "ses_eae060ab0ffdwBW3Aor9aOIouv",
+      "revision": "bb488585-f7c1-4032-8415-8fb25d0750c8",
+      "capacityRevision": "f9ac060a99dc0c96726d378e84bfa6fa8f8c72492b266e8ba0e9aeded211260c",
+      "kind": "primary",
+      "selection": "decision",
+      "tier": "medium",
+      "eligibleTiers": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "excluded": [],
+      "backend": "coding",
+      "model": "openai/gpt-4o-mini",
+      "physicalModel": "openai/gpt-4o-mini",
+      "inputEstimate": 16465,
+      "outputTokens": 2048,
+      "resources": {
+        "mode": "inherit",
+        "outcome": "inherited",
+        "viewRevision": "c7f79d127d38517023d1f7a3eb613d3d209d746246738f3ce48668c39b8c8d5b",
+        "units": [],
+        "omitted": [],
+        "proposed": [],
+        "probabilities": {}
+      },
+      "decision": {
+        "service": "openrouter",
+        "requestedModel": "typesafe/jev-1.14",
+        "responseModel": "typesafe/jev-1.14-20261014",
+        "probabilities": {
+          "low": 0.35,
+          "medium": 0.38,
+          "high": 0.26,
+          "xhigh": 0,
+          "max": 0.01
+        },
+        "confidence": 0.22,
+        "inputTokens": 7580,
+        "outputTokens": 53,
+        "evidenceBytes": 18756,
+        "omitted": []
+      },
+      "generationUsage": {
+        "inputTokens": 2847,
+        "outputTokens": 58
+      }
+    },
+    {
+      "id": "961de147-9695-4e27-8906-b17a5e046695",
+      "sessionID": "ses_eae060ab0ffdwBW3Aor9aOIouv",
+      "revision": "bb488585-f7c1-4032-8415-8fb25d0750c8",
+      "capacityRevision": "f9ac060a99dc0c96726d378e84bfa6fa8f8c72492b266e8ba0e9aeded211260c",
+      "kind": "primary",
+      "selection": "decision",
+      "tier": "medium",
+      "eligibleTiers": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "excluded": [],
+      "backend": "coding",
+      "model": "openai/gpt-4o-mini",
+      "physicalModel": "openai/gpt-4o-mini",
+      "inputEstimate": 16963,
+      "outputTokens": 2048,
+      "resources": {
+        "mode": "inherit",
+        "outcome": "inherited",
+        "viewRevision": "9f6b883a69c3734610a351c02bfbfaca272750201c2e9e105bfcbda75d0fa3df",
+        "units": [],
+        "omitted": [],
+        "proposed": [],
+        "probabilities": {}
+      },
+      "decision": {
+        "service": "openrouter",
+        "requestedModel": "typesafe/jev-1.14",
+        "responseModel": "typesafe/jev-1.14-20261014",
+        "probabilities": {
+          "low": 0.34,
+          "medium": 0.39,
+          "high": 0.26,
+          "xhigh": 0,
+          "max": 0.01
+        },
+        "confidence": 0.24,
+        "inputTokens": 7872,
+        "outputTokens": 53,
+        "evidenceBytes": 19348,
+        "omitted": []
+      },
+      "generationUsage": {
+        "inputTokens": 2936,
+        "outputTokens": 222
+      }
+    }
+  ],
+  "tools": [
+    {
+      "id": "call_e3Ml2xhvD1YzbWUWqYQ9PRXO",
+      "tool": "read",
+      "status": "completed",
+      "path": "src/csv.ts"
+    },
+    {
+      "id": "call_Hx0knRyuj1utXUd9yM1D5wYn",
+      "tool": "read",
+      "status": "completed",
+      "path": "src/import.ts"
+    },
+    {
+      "id": "call_IRhF0NTPKu9J6sF0oRo5MUxI",
+      "tool": "edit",
+      "status": "completed",
+      "path": "src/csv.ts"
+    },
+    {
+      "id": "call_2bdHc5NGuQCuQuxz6P63WF5K",
+      "tool": "edit",
+      "status": "error",
+      "path": "src/import.ts"
+    },
+    {
+      "id": "call_8cvH8b3C1pn4zzEBHiFeRvXg",
+      "tool": "edit",
+      "status": "completed",
+      "path": "src/import.ts"
+    },
+    {
+      "id": "call_HLjFdu28wnac89DW0hN4kQwe",
+      "tool": "edit",
+      "status": "completed",
+      "path": "src/import.ts"
+    }
+  ],
+  "requests": [
+    {
+      "target": 0,
+      "kind": "decision",
+      "model": "typesafe/jev-1.14",
+      "inputBytes": 15050,
+      "responseBytes": 325,
+      "elapsedMs": 231.8895,
+      "outcome": "complete",
+      "status": 200
+    },
+    {
+      "target": 1,
+      "kind": "generation",
+      "model": "openai/gpt-4o-mini",
+      "inputBytes": 9200,
+      "outputLimit": 2048,
+      "responseBytes": 6775,
+      "elapsedMs": 1218.146417,
+      "outcome": "complete",
+      "status": 200
+    },
+    {
+      "target": 0,
+      "kind": "decision",
+      "model": "typesafe/jev-1.14",
+      "inputBytes": 16245,
+      "responseBytes": 319,
+      "elapsedMs": 108.45466699999997,
+      "outcome": "complete",
+      "status": 200
+    },
+    {
+      "target": 1,
+      "kind": "generation",
+      "model": "openai/gpt-4.1-nano",
+      "inputBytes": 10196,
+      "outputLimit": 2048,
+      "responseBytes": 124725,
+      "elapsedMs": 2419.1526660000004,
+      "outcome": "complete",
+      "status": 200
+    },
+    {
+      "target": 0,
+      "kind": "decision",
+      "model": "typesafe/jev-1.14",
+      "inputBytes": 18131,
+      "responseBytes": 322,
+      "elapsedMs": 145.2559170000004,
+      "outcome": "complete",
+      "status": 200
+    },
+    {
+      "target": 1,
+      "kind": "generation",
+      "model": "openai/gpt-4.1-nano",
+      "inputBytes": 12046,
+      "outputLimit": 2048,
+      "responseBytes": 13398,
+      "elapsedMs": 881.1177500000003,
+      "outcome": "complete",
+      "status": 200
+    },
+    {
+      "target": 0,
+      "kind": "decision",
+      "model": "typesafe/jev-1.14",
+      "inputBytes": 18712,
+      "responseBytes": 325,
+      "elapsedMs": 214.85470900000018,
+      "outcome": "complete",
+      "status": 200
+    },
+    {
+      "target": 1,
+      "kind": "generation",
+      "model": "openai/gpt-4o-mini",
+      "inputBytes": 12545,
+      "outputLimit": 2048,
+      "responseBytes": 67698,
+      "elapsedMs": 3391.6202919999996,
+      "outcome": "complete",
+      "status": 200
+    },
+    {
+      "target": 0,
+      "kind": "decision",
+      "model": "typesafe/jev-1.14",
+      "inputBytes": 20256,
+      "responseBytes": 325,
+      "elapsedMs": 149.31004100000064,
+      "outcome": "complete",
+      "status": 200
+    },
+    {
+      "target": 1,
+      "kind": "generation",
+      "model": "openai/gpt-4o-mini",
+      "inputBytes": 13924,
+      "outputLimit": 2048,
+      "responseBytes": 19902,
+      "elapsedMs": 1332.4921250000007,
+      "outcome": "complete",
+      "status": 200
+    },
+    {
+      "target": 0,
+      "kind": "decision",
+      "model": "typesafe/jev-1.14",
+      "inputBytes": 20843,
+      "responseBytes": 324,
+      "elapsedMs": 133.17833400000018,
+      "outcome": "complete",
+      "status": 200
+    },
+    {
+      "target": 1,
+      "kind": "generation",
+      "model": "openai/gpt-4o-mini",
+      "inputBytes": 14417,
+      "outputLimit": 2048,
+      "responseBytes": 20271,
+      "elapsedMs": 1163.770708,
+      "outcome": "complete",
+      "status": 200
+    },
+    {
+      "target": 0,
+      "kind": "decision",
+      "model": "typesafe/jev-1.14",
+      "inputBytes": 21435,
+      "responseBytes": 325,
+      "elapsedMs": 222.29166700000133,
+      "outcome": "complete",
+      "status": 200
+    },
+    {
+      "target": 1,
+      "kind": "generation",
+      "model": "openai/gpt-4o-mini",
+      "inputBytes": 14915,
+      "outputLimit": 2048,
+      "responseBytes": 69954,
+      "elapsedMs": 3118.9423749999987,
+      "outcome": "complete",
+      "status": 200
+    }
+  ],
+  "budget": {
+    "inputBytes": 217915,
+    "responseBytes": 324988,
+    "blocked": 0
+  },
+  "catalogCost": 0,
+  "messages": [
+    {
+      "model": "auto",
+      "finish": "tool-calls",
+      "tokens": {
+        "input": 1768,
+        "output": 47,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      }
+    },
+    {
+      "model": "auto",
+      "finish": "tool-calls",
+      "tokens": {
+        "input": 1969,
+        "output": 379,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      }
+    },
+    {
+      "model": "auto",
+      "finish": "tool-calls",
+      "tokens": {
+        "input": 441,
+        "output": 44,
+        "reasoning": 0,
+        "cache": {
+          "read": 1920,
+          "write": 0
+        }
+      }
+    },
+    {
+      "model": "auto",
+      "finish": "tool-calls",
+      "tokens": {
+        "input": 688,
+        "output": 250,
+        "reasoning": 0,
+        "cache": {
+          "read": 1792,
+          "write": 0
+        }
+      }
+    },
+    {
+      "model": "auto",
+      "finish": "tool-calls",
+      "tokens": {
+        "input": 71,
+        "output": 57,
+        "reasoning": 0,
+        "cache": {
+          "read": 2688,
+          "write": 0
+        }
+      }
+    },
+    {
+      "model": "auto",
+      "finish": "tool-calls",
+      "tokens": {
+        "input": 159,
+        "output": 58,
+        "reasoning": 0,
+        "cache": {
+          "read": 2688,
+          "write": 0
+        }
+      }
+    },
+    {
+      "model": "auto",
+      "finish": "stop",
+      "tokens": {
+        "input": 120,
+        "output": 222,
+        "reasoning": 0,
+        "cache": {
+          "read": 2816,
+          "write": 0
+        }
+      }
+    }
+  ],
+  "finalText": {
+    "length": 986,
+    "sha256": "62e25bc6caf7b8a839a9221a115f3344bfb4ac63030fff9efb33a12820bf4ba6"
+  },
+  "fileHashes": {
+    "before": {
+      "README.md": "192a2ef929ce22377d0b2d2eeac43e7200d419eb484ee271aaebad87a76e7a01",
+      "src/csv.ts": "f8b21dcc55b6b776641be4ecafbed30de6791c838a10a7cddd67610d43162525",
+      "src/import.ts": "546f17bc50d7d0f7d05126bb06d8f47e1929b913d09d6ae00e7ea641d1aaa651",
+      "src/cli.ts": "30c03926f9cbca76249cf09b1664ca83e7978e888bb729e2deceeffb6b61d58e",
+      "test/csv.test.ts": "d3fe2eddcea38e062aae366ccd7b7c4a7b7a1042773451fa58e27d9012c2d206",
+      "sample.csv": "8531b5894971a7496024dd796598a1a72bd58d01654ec53214a75cd4f3f9c6b6",
+      "invalid.csv": "17a373d8a99cbc0238d1b1b87088915e04040adec99d3605d930099ee4f42df0"
+    },
+    "after": {
+      "README.md": "192a2ef929ce22377d0b2d2eeac43e7200d419eb484ee271aaebad87a76e7a01",
+      "src/csv.ts": "4fead015570a434a307db8d4403d769ae5728a501600e0e8f350263cd506bdb9",
+      "src/import.ts": "a6073800332c33b95e58116758c681f677021879b5f586b96c989f4c93178e4a",
+      "src/cli.ts": "30c03926f9cbca76249cf09b1664ca83e7978e888bb729e2deceeffb6b61d58e",
+      "test/csv.test.ts": "d3fe2eddcea38e062aae366ccd7b7c4a7b7a1042773451fa58e27d9012c2d206",
+      "sample.csv": "8531b5894971a7496024dd796598a1a72bd58d01654ec53214a75cd4f3f9c6b6",
+      "invalid.csv": "17a373d8a99cbc0238d1b1b87088915e04040adec99d3605d930099ee4f42df0"
+    }
+  },
+  "quality": "single-task-only; not-qualified",
+  "billing": "not-measured; catalog cost excludes decision service and is not a physical bill"
+}

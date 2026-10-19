@@ -1,0 +1,18 @@
+{
+  "purpose": "Bounded exploratory comparison; original exact-match contract retained; not a quality qualification.",
+  "order": [
+    "baseline-1",
+    "explicit-prompt-1",
+    "fixed-mini-1",
+    "baseline-2",
+    "explicit-prompt-2",
+    "fixed-mini-2"
+  ],
+  "maxRequestsTotal": 18,
+  "maxRequestsPerRun": 3,
+  "maxDurationMsPerRun": 30000,
+  "maxOutputTokensPerGeneration": 128,
+  "repetitionsPerGroup": 2,
+  "fixedMiniControl": "All five configured tier pairs use the existing native openai/gpt-4.1-mini model. Auxiliary pairs, resource/approval thresholds and the exact expected text are unchanged.",
+  "stopPolicy": "No retry of any individual run. Stop the suite on authentication failure, relay budget failure, or incomplete execution; exact-text failure is a recorded result and does not authorize additional calls."
+}

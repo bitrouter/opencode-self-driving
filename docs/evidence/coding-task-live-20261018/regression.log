@@ -1,0 +1,188 @@
+$ bun script/test.ts --test-name-pattern "multiple text blocks|mixed text and media" --rerun-each "10"
+bun test v1.4.2 (744846f84)
+
+test/policies.test.ts: (run #1)
+
+test/policies.test.ts: (run #2)
+
+test/policies.test.ts: (run #3)
+
+test/policies.test.ts: (run #4)
+
+test/policies.test.ts: (run #5)
+
+test/policies.test.ts: (run #6)
+
+test/policies.test.ts: (run #7)
+
+test/policies.test.ts: (run #8)
+
+test/policies.test.ts: (run #9)
+
+test/policies.test.ts: (run #10)
+
+test/tui.test.tsx: (run #1)
+
+test/tui.test.tsx: (run #2)
+
+test/tui.test.tsx: (run #3)
+
+test/tui.test.tsx: (run #4)
+
+test/tui.test.tsx: (run #5)
+
+test/tui.test.tsx: (run #6)
+
+test/tui.test.tsx: (run #7)
+
+test/tui.test.tsx: (run #8)
+
+test/tui.test.tsx: (run #9)
+
+test/tui.test.tsx: (run #10)
+
+test/bridge.test.ts: (run #1)
+(pass) mixed text and media tool results remain unsupported [0.37ms]
+
+test/bridge.test.ts: (run #2)
+(pass) mixed text and media tool results remain unsupported [0.07ms]
+
+test/bridge.test.ts: (run #3)
+(pass) mixed text and media tool results remain unsupported [0.04ms]
+
+test/bridge.test.ts: (run #4)
+(pass) mixed text and media tool results remain unsupported [0.04ms]
+
+test/bridge.test.ts: (run #5)
+(pass) mixed text and media tool results remain unsupported [0.03ms]
+
+test/bridge.test.ts: (run #6)
+(pass) mixed text and media tool results remain unsupported [0.03ms]
+
+test/bridge.test.ts: (run #7)
+(pass) mixed text and media tool results remain unsupported [0.03ms]
+
+test/bridge.test.ts: (run #8)
+(pass) mixed text and media tool results remain unsupported [0.04ms]
+
+test/bridge.test.ts: (run #9)
+(pass) mixed text and media tool results remain unsupported [0.06ms]
+
+test/bridge.test.ts: (run #10)
+(pass) mixed text and media tool results remain unsupported [0.04ms]
+
+test/routing.test.ts: (run #1)
+(pass) multiple text blocks from a failed shell command survive routing to another tier [413.74ms]
+
+test/routing.test.ts: (run #2)
+(pass) multiple text blocks from a failed shell command survive routing to another tier [170.23ms]
+
+test/routing.test.ts: (run #3)
+(pass) multiple text blocks from a failed shell command survive routing to another tier [155.94ms]
+
+test/routing.test.ts: (run #4)
+(pass) multiple text blocks from a failed shell command survive routing to another tier [159.06ms]
+
+test/routing.test.ts: (run #5)
+(pass) multiple text blocks from a failed shell command survive routing to another tier [156.58ms]
+
+test/routing.test.ts: (run #6)
+(pass) multiple text blocks from a failed shell command survive routing to another tier [160.08ms]
+
+test/routing.test.ts: (run #7)
+(pass) multiple text blocks from a failed shell command survive routing to another tier [152.68ms]
+
+test/routing.test.ts: (run #8)
+(pass) multiple text blocks from a failed shell command survive routing to another tier [161.40ms]
+
+test/routing.test.ts: (run #9)
+(pass) multiple text blocks from a failed shell command survive routing to another tier [152.38ms]
+
+test/routing.test.ts: (run #10)
+(pass) multiple text blocks from a failed shell command survive routing to another tier [147.61ms]
+
+test/qualification.test.ts: (run #1)
+
+test/qualification.test.ts: (run #2)
+
+test/qualification.test.ts: (run #3)
+
+test/qualification.test.ts: (run #4)
+
+test/qualification.test.ts: (run #5)
+
+test/qualification.test.ts: (run #6)
+
+test/qualification.test.ts: (run #7)
+
+test/qualification.test.ts: (run #8)
+
+test/qualification.test.ts: (run #9)
+
+test/qualification.test.ts: (run #10)
+
+test/package.test.ts: (run #1)
+
+test/package.test.ts: (run #2)
+
+test/package.test.ts: (run #3)
+
+test/package.test.ts: (run #4)
+
+test/package.test.ts: (run #5)
+
+test/package.test.ts: (run #6)
+
+test/package.test.ts: (run #7)
+
+test/package.test.ts: (run #8)
+
+test/package.test.ts: (run #9)
+
+test/package.test.ts: (run #10)
+
+test/evidence.test.ts: (run #1)
+
+test/evidence.test.ts: (run #2)
+
+test/evidence.test.ts: (run #3)
+
+test/evidence.test.ts: (run #4)
+
+test/evidence.test.ts: (run #5)
+
+test/evidence.test.ts: (run #6)
+
+test/evidence.test.ts: (run #7)
+
+test/evidence.test.ts: (run #8)
+
+test/evidence.test.ts: (run #9)
+
+test/evidence.test.ts: (run #10)
+
+test/lifecycle.test.ts: (run #1)
+
+test/lifecycle.test.ts: (run #2)
+
+test/lifecycle.test.ts: (run #3)
+
+test/lifecycle.test.ts: (run #4)
+
+test/lifecycle.test.ts: (run #5)
+
+test/lifecycle.test.ts: (run #6)
+
+test/lifecycle.test.ts: (run #7)
+
+test/lifecycle.test.ts: (run #8)
+
+test/lifecycle.test.ts: (run #9)
+
+test/lifecycle.test.ts: (run #10)
+
+ 20 pass
+ 1260 filtered out
+ 0 fail
+ 60 expect() calls
+Ran 20 tests across 8 files. [13.83s]

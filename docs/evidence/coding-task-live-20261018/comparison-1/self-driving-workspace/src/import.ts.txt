@@ -1,0 +1,12 @@
+import { parseCsv } from "./csv"
+
+export function importCsv(text: string): Record<string, string>[] {
+  const [headers, ...rows] = parseCsv(text)
+  if (!headers || headers.length === 0) return []
+  return rows.map((row) => {
+    if (row.length !== headers.length) {
+      throw new Error("Data row has different number of fields than headers")
+    }
+    return Object.fromEntries(headers.map((header, index) => [header, row[index] ?? ""]))
+  })
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "suite": "visible",
+    "exitCode": 1,
+    "tests": 5,
+    "failures": 4
+  },
+  {
+    "suite": "acceptance",
+    "exitCode": 1,
+    "tests": 16,
+    "failures": 15
+  }
+]

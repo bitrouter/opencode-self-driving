@@ -1,0 +1,356 @@
+{
+  "schemaVersion": 1,
+  "version": "0.6.0-dev.0",
+  "mode": "execute",
+  "planHash": "4393768fe7c01ef0821d2414b7f344cc0a8eeb5736e17db5c976699d6c2102b2",
+  "endpoints": [
+    {
+      "kind": "decision",
+      "url": "https://openrouter.ai/api/v1"
+    },
+    {
+      "kind": "generation",
+      "url": "https://openrouter.ai/api/v1"
+    }
+  ],
+  "limits": {
+    "maxRequests": 10,
+    "maxOutputTokens": 128,
+    "maxDurationMs": 90000,
+    "maxInputBytes": 300000,
+    "maxResponseBytes": 262144,
+    "maxStepsPerCase": 3
+  },
+  "missingEnvironment": [],
+  "state": "incomplete",
+  "capacity": {
+    "capacityRevision": "f9ac060a99dc0c96726d378e84bfa6fa8f8c72492b266e8ba0e9aeded211260c",
+    "limit": {
+      "input": 1046424,
+      "context": 1046552,
+      "output": 128
+    }
+  },
+  "catalog": [
+    {
+      "backend": "coding",
+      "providerFound": true,
+      "model": "openai/gpt-4.1-nano",
+      "enabled": true,
+      "package": "@opencode/ai/providers/openrouter"
+    },
+    {
+      "backend": "coding",
+      "providerFound": true,
+      "model": "openai/gpt-4o-mini",
+      "enabled": true,
+      "package": "@opencode/ai/providers/openrouter"
+    },
+    {
+      "backend": "coding",
+      "providerFound": true,
+      "model": "openai/gpt-4.1-mini",
+      "enabled": true,
+      "package": "@opencode/ai/providers/openrouter"
+    }
+  ],
+  "physicalModels": [
+    {
+      "backend": "coding",
+      "model": "openai/gpt-4.1-nano",
+      "physicalModel": "openai/gpt-4.1-nano",
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      }
+    },
+    {
+      "backend": "coding",
+      "model": "openai/gpt-4o-mini",
+      "physicalModel": "openai/gpt-4o-mini",
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      }
+    },
+    {
+      "backend": "coding",
+      "model": "openai/gpt-4.1-mini",
+      "physicalModel": "openai/gpt-4.1-mini",
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      }
+    }
+  ],
+  "requests": [
+    {
+      "target": 0,
+      "kind": "decision",
+      "model": "typesafe/jev-1.14",
+      "inputBytes": 3194,
+      "responseBytes": 226,
+      "elapsedMs": 194.97279200000003,
+      "outcome": "complete",
+      "status": 200
+    },
+    {
+      "target": 0,
+      "kind": "decision",
+      "model": "typesafe/jev-1.14",
+      "inputBytes": 6324,
+      "responseBytes": 316,
+      "elapsedMs": 159.0958340000002,
+      "outcome": "complete",
+      "status": 200
+    },
+    {
+      "target": 1,
+      "kind": "generation",
+      "model": "openai/gpt-4.1-nano",
+      "inputBytes": 2054,
+      "outputLimit": 128,
+      "responseBytes": 2408,
+      "elapsedMs": 624.1192919999999,
+      "outcome": "complete",
+      "status": 200
+    }
+  ],
+  "network": {
+    "loopbackRequests": 0,
+    "providerRequests": 3
+  },
+  "budget": {
+    "inputBytes": 11572,
+    "responseBytes": 2950,
+    "blocked": 0
+  },
+  "samples": [
+    {
+      "id": "text-connectivity",
+      "split": "tuning",
+      "outcome": "succeeded",
+      "elapsedMs": 1112.2675829999998,
+      "textMatch": false,
+      "toolCalls": 0,
+      "toolMatches": 0,
+      "manualReplies": 0,
+      "steps": 1,
+      "routes": [
+        {
+          "id": "cbafe9a3-86ac-4d7d-a35b-7781d8897c64",
+          "sessionID": "ses_eae2bd11bffeOS0tHY8x0o177M",
+          "revision": "393ec52c-f979-44cb-ab6d-6519db311328",
+          "capacityRevision": "f9ac060a99dc0c96726d378e84bfa6fa8f8c72492b266e8ba0e9aeded211260c",
+          "kind": "primary",
+          "selection": "decision",
+          "tier": "low",
+          "eligibleTiers": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "excluded": [],
+          "backend": "coding",
+          "model": "openai/gpt-4.1-nano",
+          "physicalModel": "openai/gpt-4.1-nano",
+          "inputEstimate": 3078,
+          "outputTokens": 128,
+          "resources": {
+            "mode": "select",
+            "outcome": "selected",
+            "viewRevision": "139b703f5a5dd37e16c47dbd19738541c0ebd7c445cd4841bd1eb557dcb95d36",
+            "units": [
+              {
+                "id": "unrelated",
+                "kind": "instruction",
+                "source": "qualification",
+                "required": false,
+                "dependencies": [],
+                "tools": [],
+                "version": "2d539207cc43c54e6d6b99ba2a9251c2a6986a897654e2642ecdc58a2d5d8006"
+              }
+            ],
+            "omitted": [
+              "unrelated"
+            ],
+            "proposed": [
+              "unrelated"
+            ],
+            "probabilities": {
+              "unrelated": 0.05
+            },
+            "decision": {
+              "service": "openrouter",
+              "requestedModel": "typesafe/jev-1.14",
+              "responseModel": "typesafe/jev-1.14-20261014",
+              "inputTokens": 1377,
+              "outputTokens": 22,
+              "evidenceBytes": 2886
+            }
+          },
+          "decision": {
+            "service": "openrouter",
+            "requestedModel": "typesafe/jev-1.14",
+            "responseModel": "typesafe/jev-1.14-20261014",
+            "probabilities": {
+              "low": 0.99,
+              "medium": 0.01,
+              "high": 0,
+              "xhigh": 0,
+              "max": 0
+            },
+            "confidence": 0.99,
+            "inputTokens": 3149,
+            "outputTokens": 53,
+            "evidenceBytes": 4237,
+            "omitted": []
+          },
+          "generationUsage": {
+            "inputTokens": 444,
+            "outputTokens": 6
+          }
+        }
+      ],
+      "approvals": []
+    }
+  ],
+  "metrics": {
+    "tuning": {
+      "planned": 1,
+      "samples": 1,
+      "completionExactMatch": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0
+      },
+      "routingLabelMismatch": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "resources": {
+        "wrongOmissionsAmongNeeded": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "wrongOmissionsAmongOmitted": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0
+        },
+        "omissionCoverage": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1
+        }
+      },
+      "approval": {
+        "labeledDecisions": 0,
+        "probabilityCoverage": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "falseNegativeRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "wrongAmongProposedAllow": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "proposedAllowCoverage": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "actualAutoAllowCoverage": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "manualRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "manualReplies": 0
+      },
+      "calibration": "not-qualified"
+    },
+    "holdout": {
+      "planned": 1,
+      "samples": 0,
+      "completionExactMatch": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "routingLabelMismatch": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "resources": {
+        "wrongOmissionsAmongNeeded": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "wrongOmissionsAmongOmitted": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "omissionCoverage": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        }
+      },
+      "approval": {
+        "labeledDecisions": 0,
+        "probabilityCoverage": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "falseNegativeRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "wrongAmongProposedAllow": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "proposedAllowCoverage": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "actualAutoAllowCoverage": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "manualRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "manualReplies": 0
+      },
+      "calibration": "not-qualified"
+    }
+  },
+  "quality": "not-qualified",
+  "billing": "unknown; catalog estimates and reported tokens are not physical invoices"
+}

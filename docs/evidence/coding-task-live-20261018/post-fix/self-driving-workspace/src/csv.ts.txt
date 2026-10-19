@@ -1,0 +1,43 @@
+export function parseCsv(text: string): string[][] {
+  return text
+    .replace(/^BBOM/, '')
+    .split(/
+?
+/)
+    .map((line) => {
+        const fields = [];
+        let i = 0;
+        while (i < line.length) {
+            if (line[i] === '"') {
+                let endQuoteIndex = i + 1;
+                while (endQuoteIndex < line.length) {
+                    if (line[endQuoteIndex] === '"') {
+                        if (line[endQuoteIndex + 1] === '"') {
+                            endQuoteIndex += 2;
+                        } else {
+                            break;
+                        }
+                    } else {
+                        endQuoteIndex++;
+                    }
+                }
+                if (endQuoteIndex >= line.length) {
+                    throw new Error('Unterminated quoted field');
+                }
+                fields.push(line.slice(i + 1, endQuoteIndex).replace(/""/g, '"'));
+                i = endQuoteIndex + 1;
+                if (line[i] === ',') {
+                    i++;
+                }
+            } else {
+                let commaIndex = line.indexOf(',', i);
+                if (commaIndex === -1) {
+                    commaIndex = line.length;
+                }
+                fields.push(line.slice(i, commaIndex));
+                i = commaIndex + 1;
+            }
+        }
+        return fields;
+    });
+}

@@ -1,0 +1,17 @@
+bun test v1.4.2 (744846f84)
+
+../../../../../../../../../../../private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-cx5tun2o/acceptance.test.ts:
+
+# Unhandled error between tests
+-------------------------------
+4 |     .split(/
+               ^
+error: Syntax Error
+    at <opencode-checkout>/opencode-self-driving/artifacts/0.6.0-dev.0/coding-task-live-20261018/post-fix/self-driving-workspace/src/csv.ts:4:12
+-------------------------------
+
+
+ 0 pass
+ 1 fail
+ 1 error
+Ran 1 test across 1 file. [20.00ms]

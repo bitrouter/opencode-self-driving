@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "profile": {
+    "schemaVersion": 1,
+    "name": "text-remediation-baseline-1",
+    "backends": {
+      "coding": {
+        "service": "openrouter",
+        "providerID": "openrouter",
+        "auth": {
+          "type": "integration",
+          "integrationID": "openrouter"
+        }
+      }
+    },
+    "decision": {
+      "service": "openrouter",
+      "model": "typesafe/jev-1.14",
+      "allowedResponseModels": [
+        "typesafe/jev-1.14-20261014"
+      ],
+      "auth": {
+        "type": "integration",
+        "integrationID": "openrouter"
+      },
+      "baseURL": "https://openrouter.ai/api/v1",
+      "maxInputBytes": 32000,
+      "maxInputTokens": 32000
+    },
+    "tiers": {
+      "low": {
+        "backend": "coding",
+        "model": "openai/gpt-4.1-nano"
+      },
+      "medium": {
+        "backend": "coding",
+        "model": "openai/gpt-4o-mini"
+      },
+      "high": {
+        "backend": "coding",
+        "model": "openai/gpt-4.1-mini"
+      },
+      "xhigh": {
+        "backend": "coding",
+        "model": "openai/gpt-4.1-mini"
+      },
+      "max": {
+        "backend": "coding",
+        "model": "openai/gpt-4.1-mini"
+      }
+    },
+    "auxiliary": {
+      "title": {
+        "backend": "coding",
+        "model": "openai/gpt-4.1-nano"
+      },
+      "compaction": {
+        "backend": "coding",
+        "model": "openai/gpt-4.1-mini"
+      },
+      "generate": {
+        "backend": "coding",
+        "model": "openai/gpt-4.1-nano"
+      }
+    },
+    "outputTokens": 128,
+    "overheadTokens": 1024,
+    "preparationTimeoutMs": 20000,
+    "evidence": {
+      "mode": "bounded",
+      "maxBytes": 24000,
+      "maxTokens": 24000
+    },
+    "resources": {
+      "tauOmit": 0.1
+    },
+    "approval": {
+      "tauAllow": 0.05,
+      "timeoutMs": 15000,
+      "maxBytes": 24000,
+      "maxTokens": 24000,
+      "mcpServers": [
+        "qualification"
+      ]
+    }
+  },
+  "endpoints": {
+    "decision": "https://openrouter.ai/api/v1",
+    "backends": {
+      "coding": "https://openrouter.ai/api/v1"
+    }
+  },
+  "credentials": {
+    "openrouter": "OPENROUTER_TEST_KEY"
+  },
+  "limits": {
+    "maxRequests": 3,
+    "maxOutputTokens": 128,
+    "maxDurationMs": 30000,
+    "maxInputBytes": 40000,
+    "maxResponseBytes": 20000,
+    "maxStepsPerCase": 3
+  },
+  "cases": [
+    {
+      "id": "baseline-1",
+      "split": "tuning",
+      "prompt": "Reply with exactly QUALIFICATION_TEXT and nothing else.",
+      "expectedText": "QUALIFICATION_TEXT",
+      "acceptableTiers": [],
+      "contextSelection": "select",
+      "approval": "off",
+      "resources": [
+        {
+          "id": "unrelated",
+          "text": "Unrelated reference: this project once used a blue icon.",
+          "required": false,
+          "needed": false
+        }
+      ]
+    }
+  ]
+}

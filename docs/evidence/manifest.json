@@ -1,0 +1,727 @@
+{
+  "schemaVersion": 1,
+  "policy": "Curated synthetic plans, results, task outputs and compact logs. Local checkout paths are normalized; raw artifacts stay local. Credential/account endpoints, account balances, model catalog dumps, host logs, databases and tarballs are excluded. Log presentation normalizes trailing spaces; source SHA-256 preserves the original record.",
+  "files": [
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-live-20261018/live.json",
+      "file": "openrouter-live-20261018/live.json",
+      "sourceSha256": "32474fe4d6288ea3b6c3243a0297eac02e87eada5de6e20edf3938fcb42f4730",
+      "sha256": "32474fe4d6288ea3b6c3243a0297eac02e87eada5de6e20edf3938fcb42f4730",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-live-20261018/mcp-followup-plan.json",
+      "file": "openrouter-live-20261018/mcp-followup-plan.json",
+      "sourceSha256": "3e6ed54182d5476ec6266708af2e2737aaf9aab21dcaccb39ee67fc625f8634b",
+      "sha256": "3e6ed54182d5476ec6266708af2e2737aaf9aab21dcaccb39ee67fc625f8634b",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-live-20261018/mcp-live.json",
+      "file": "openrouter-live-20261018/mcp-live.json",
+      "sourceSha256": "ded52d6b591c21108cdfc6797e764057c680f1f508fecd689e73271c4d53c139",
+      "sha256": "ded52d6b591c21108cdfc6797e764057c680f1f508fecd689e73271c4d53c139",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-live-20261018/plan.json",
+      "file": "openrouter-live-20261018/plan.json",
+      "sourceSha256": "01f20766baae87d7c9c4c350e47952c37aa825461370951bb96fa7073660c1ef",
+      "sha256": "01f20766baae87d7c9c4c350e47952c37aa825461370951bb96fa7073660c1ef",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-live-20261018/preflight.json",
+      "file": "openrouter-live-20261018/preflight.json",
+      "sourceSha256": "026fd3cc7a7713f000b229cbbd855407c9252224666ce68d83822f38bd065d8a",
+      "sha256": "026fd3cc7a7713f000b229cbbd855407c9252224666ce68d83822f38bd065d8a",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-live-20261018/summary.json",
+      "file": "openrouter-live-20261018/summary.json",
+      "sourceSha256": "9c0d1eac6759b7290b5f5cb7866337fe62d503d461b754e02d050ed1f2f0ea0d",
+      "sha256": "9c0d1eac6759b7290b5f5cb7866337fe62d503d461b754e02d050ed1f2f0ea0d",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-text-diagnostic-20261018/check.log",
+      "file": "openrouter-text-diagnostic-20261018/check.log",
+      "sourceSha256": "8a91764eb17c38771c3cce2df46ffbe40ad704c9d880437ea8b7c4218e7dc802",
+      "sha256": "8a91764eb17c38771c3cce2df46ffbe40ad704c9d880437ea8b7c4218e7dc802",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-text-diagnostic-20261018/lint.log",
+      "file": "openrouter-text-diagnostic-20261018/lint.log",
+      "sourceSha256": "8be2b069d8ae4e21d4dd2b07c1ffb541d300ab742c50cdf0beddd7c3155680be",
+      "sha256": "8be2b069d8ae4e21d4dd2b07c1ffb541d300ab742c50cdf0beddd7c3155680be",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-text-diagnostic-20261018/live.json",
+      "file": "openrouter-text-diagnostic-20261018/live.json",
+      "sourceSha256": "43caa5ca249d506ed9a577eeaf5a6db08e78390fc71f9047b93cd5c74218a6db",
+      "sha256": "43caa5ca249d506ed9a577eeaf5a6db08e78390fc71f9047b93cd5c74218a6db",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-text-diagnostic-20261018/plan.json",
+      "file": "openrouter-text-diagnostic-20261018/plan.json",
+      "sourceSha256": "e7401ea052d9176bce1efe698c6316a35dd0186f70033aee8898f04068dcecf7",
+      "sha256": "e7401ea052d9176bce1efe698c6316a35dd0186f70033aee8898f04068dcecf7",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-text-diagnostic-20261018/replay.log",
+      "file": "openrouter-text-diagnostic-20261018/replay.log",
+      "sourceSha256": "88ca636f1f0e9d1261f402377ce45b1ee54622559f9c0777e9521c9139d8e1bb",
+      "sha256": "88ca636f1f0e9d1261f402377ce45b1ee54622559f9c0777e9521c9139d8e1bb",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-text-remediation-20261018/baseline-1-live.json",
+      "file": "openrouter-text-remediation-20261018/baseline-1-live.json",
+      "sourceSha256": "ec8a6a6f8c2cf54cb7783a96bf05a952abaf127a23c756e545f9feb6c55386ef",
+      "sha256": "ec8a6a6f8c2cf54cb7783a96bf05a952abaf127a23c756e545f9feb6c55386ef",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-text-remediation-20261018/baseline-1-plan.json",
+      "file": "openrouter-text-remediation-20261018/baseline-1-plan.json",
+      "sourceSha256": "952b590e091cc23097372e80e64c09970f483a77c85363690dcc8cdcccea18ba",
+      "sha256": "952b590e091cc23097372e80e64c09970f483a77c85363690dcc8cdcccea18ba",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-text-remediation-20261018/baseline-1-preflight.json",
+      "file": "openrouter-text-remediation-20261018/baseline-1-preflight.json",
+      "sourceSha256": "f9d16daacfb56d504a0b9c35c04556d27aa3ee9e49a9712a8adc0163308b688c",
+      "sha256": "f9d16daacfb56d504a0b9c35c04556d27aa3ee9e49a9712a8adc0163308b688c",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-text-remediation-20261018/baseline-2-live.json",
+      "file": "openrouter-text-remediation-20261018/baseline-2-live.json",
+      "sourceSha256": "02d0f2a3685040350a67c5858347ed5ad34bc7a6e068b2e8932b3a70a45ac99f",
+      "sha256": "02d0f2a3685040350a67c5858347ed5ad34bc7a6e068b2e8932b3a70a45ac99f",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-text-remediation-20261018/baseline-2-plan.json",
+      "file": "openrouter-text-remediation-20261018/baseline-2-plan.json",
+      "sourceSha256": "4121e91451648802d5a5b63e13487756e42a207773123a55b304bf1eeb790184",
+      "sha256": "4121e91451648802d5a5b63e13487756e42a207773123a55b304bf1eeb790184",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-text-remediation-20261018/baseline-2-preflight.json",
+      "file": "openrouter-text-remediation-20261018/baseline-2-preflight.json",
+      "sourceSha256": "afc5506c2c605a654e70476a2babf7d96ea37d5770d93676e6ef08676e3fbe0e",
+      "sha256": "afc5506c2c605a654e70476a2babf7d96ea37d5770d93676e6ef08676e3fbe0e",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-text-remediation-20261018/design.json",
+      "file": "openrouter-text-remediation-20261018/design.json",
+      "sourceSha256": "fbc3eb62115c34948abfc9f2e59cac99ea0127a9ed7e4b1c15eaf97da616284b",
+      "sha256": "fbc3eb62115c34948abfc9f2e59cac99ea0127a9ed7e4b1c15eaf97da616284b",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-text-remediation-20261018/explicit-prompt-1-live.json",
+      "file": "openrouter-text-remediation-20261018/explicit-prompt-1-live.json",
+      "sourceSha256": "3bab61088721d32b3e5c55338c4bee009b2faa7b76774fb1837999df0a9fb947",
+      "sha256": "3bab61088721d32b3e5c55338c4bee009b2faa7b76774fb1837999df0a9fb947",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-text-remediation-20261018/explicit-prompt-1-plan.json",
+      "file": "openrouter-text-remediation-20261018/explicit-prompt-1-plan.json",
+      "sourceSha256": "bf3a56e61684b0da9649bbe338703725e068c04f04346e60a0fe6f5ff14b3a36",
+      "sha256": "bf3a56e61684b0da9649bbe338703725e068c04f04346e60a0fe6f5ff14b3a36",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-text-remediation-20261018/explicit-prompt-1-preflight.json",
+      "file": "openrouter-text-remediation-20261018/explicit-prompt-1-preflight.json",
+      "sourceSha256": "f898c62632595d3eaeb724ea6809c4e03139e7c1830c285c826c21cc840fa397",
+      "sha256": "f898c62632595d3eaeb724ea6809c4e03139e7c1830c285c826c21cc840fa397",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-text-remediation-20261018/explicit-prompt-2-live.json",
+      "file": "openrouter-text-remediation-20261018/explicit-prompt-2-live.json",
+      "sourceSha256": "50ec75d89e4b52cdf22c5e2d93f0f1f13b5ce9b03d08031b5e2569a4d0bbbfe3",
+      "sha256": "50ec75d89e4b52cdf22c5e2d93f0f1f13b5ce9b03d08031b5e2569a4d0bbbfe3",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-text-remediation-20261018/explicit-prompt-2-plan.json",
+      "file": "openrouter-text-remediation-20261018/explicit-prompt-2-plan.json",
+      "sourceSha256": "11823b7211508991ebaa310dd39f4733a11fe6b9f1bdea559a0ec53c5fe1ab73",
+      "sha256": "11823b7211508991ebaa310dd39f4733a11fe6b9f1bdea559a0ec53c5fe1ab73",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-text-remediation-20261018/explicit-prompt-2-preflight.json",
+      "file": "openrouter-text-remediation-20261018/explicit-prompt-2-preflight.json",
+      "sourceSha256": "75efd06990444c408767bc7e7f3cf0fce9793fbdec3a3a41dcd39a265a61d1c4",
+      "sha256": "75efd06990444c408767bc7e7f3cf0fce9793fbdec3a3a41dcd39a265a61d1c4",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-text-remediation-20261018/fixed-mini-1-live.json",
+      "file": "openrouter-text-remediation-20261018/fixed-mini-1-live.json",
+      "sourceSha256": "f1d13872c0e8cdf08d989298a504c929a79285e2ebbbfded9cf246b21da73da8",
+      "sha256": "f1d13872c0e8cdf08d989298a504c929a79285e2ebbbfded9cf246b21da73da8",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-text-remediation-20261018/fixed-mini-1-plan.json",
+      "file": "openrouter-text-remediation-20261018/fixed-mini-1-plan.json",
+      "sourceSha256": "ea5ff5439875a8a57b91715336dd78c3aaf60c6168486cbd1e2e0c6949ca857a",
+      "sha256": "ea5ff5439875a8a57b91715336dd78c3aaf60c6168486cbd1e2e0c6949ca857a",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-text-remediation-20261018/fixed-mini-1-preflight.json",
+      "file": "openrouter-text-remediation-20261018/fixed-mini-1-preflight.json",
+      "sourceSha256": "5c6b1ef32727df1d1ad229273288fed555e2cce496c96b1a8ac9990e867c376f",
+      "sha256": "5c6b1ef32727df1d1ad229273288fed555e2cce496c96b1a8ac9990e867c376f",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-text-remediation-20261018/fixed-mini-2-live.json",
+      "file": "openrouter-text-remediation-20261018/fixed-mini-2-live.json",
+      "sourceSha256": "e0212c2304e13d6421d19fad92d492b59dd5ccd0e679bbab387277d6c587d516",
+      "sha256": "e0212c2304e13d6421d19fad92d492b59dd5ccd0e679bbab387277d6c587d516",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-text-remediation-20261018/fixed-mini-2-plan.json",
+      "file": "openrouter-text-remediation-20261018/fixed-mini-2-plan.json",
+      "sourceSha256": "b93a5a71a673f13b531d0f2dc628029f19eecbe485254867c7863cdaf9b165b5",
+      "sha256": "b93a5a71a673f13b531d0f2dc628029f19eecbe485254867c7863cdaf9b165b5",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-text-remediation-20261018/fixed-mini-2-preflight.json",
+      "file": "openrouter-text-remediation-20261018/fixed-mini-2-preflight.json",
+      "sourceSha256": "af25d7bcf0c3e7535c5677c9825ebab0b524b058c7a0ff160175ace4c1a1540c",
+      "sha256": "af25d7bcf0c3e7535c5677c9825ebab0b524b058c7a0ff160175ace4c1a1540c",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/openrouter-text-remediation-20261018/summary.json",
+      "file": "openrouter-text-remediation-20261018/summary.json",
+      "sourceSha256": "5db9f77f068271209b5259d71ba521ab8fa816c99027157a4a0a3cb046a047ea",
+      "sha256": "181fd4d8a37f5ee0b0abb14ba94643f616f7b5e5aa7972aec89ace8cd6577741",
+      "redacted": true
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/baseline-live.json",
+      "file": "coding-task-live-20261018/baseline-live.json",
+      "sourceSha256": "2515b52cbcbee59bc8d15af34edd70799dd801992254f1bc6ca29ab589b20697",
+      "sha256": "2515b52cbcbee59bc8d15af34edd70799dd801992254f1bc6ca29ab589b20697",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/baseline-plan.json",
+      "file": "coding-task-live-20261018/baseline-plan.json",
+      "sourceSha256": "45b045bee4626904f63735c2537f45936165da0f20700eec2dcb073a9e91c310",
+      "sha256": "45b045bee4626904f63735c2537f45936165da0f20700eec2dcb073a9e91c310",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/baseline-preflight-worker.log",
+      "file": "coding-task-live-20261018/baseline-preflight-worker.log",
+      "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/baseline-preflight.json",
+      "file": "coding-task-live-20261018/baseline-preflight.json",
+      "sourceSha256": "e21d2bbbc419173adac2427e0748cf505b15876d9e1f717c901f37662abb20c8",
+      "sha256": "e21d2bbbc419173adac2427e0748cf505b15876d9e1f717c901f37662abb20c8",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/baseline-worker.log",
+      "file": "coding-task-live-20261018/baseline-worker.log",
+      "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/baseline-workspace/README.md",
+      "file": "coding-task-live-20261018/baseline-workspace/README.md",
+      "sourceSha256": "192a2ef929ce22377d0b2d2eeac43e7200d419eb484ee271aaebad87a76e7a01",
+      "sha256": "192a2ef929ce22377d0b2d2eeac43e7200d419eb484ee271aaebad87a76e7a01",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/baseline-workspace/invalid.csv",
+      "file": "coding-task-live-20261018/baseline-workspace/invalid.csv",
+      "sourceSha256": "17a373d8a99cbc0238d1b1b87088915e04040adec99d3605d930099ee4f42df0",
+      "sha256": "17a373d8a99cbc0238d1b1b87088915e04040adec99d3605d930099ee4f42df0",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/baseline-workspace/sample.csv",
+      "file": "coding-task-live-20261018/baseline-workspace/sample.csv",
+      "sourceSha256": "8531b5894971a7496024dd796598a1a72bd58d01654ec53214a75cd4f3f9c6b6",
+      "sha256": "8531b5894971a7496024dd796598a1a72bd58d01654ec53214a75cd4f3f9c6b6",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/baseline-workspace/src/cli.ts",
+      "file": "coding-task-live-20261018/baseline-workspace/src/cli.ts.txt",
+      "sourceSha256": "30c03926f9cbca76249cf09b1664ca83e7978e888bb729e2deceeffb6b61d58e",
+      "sha256": "30c03926f9cbca76249cf09b1664ca83e7978e888bb729e2deceeffb6b61d58e",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/baseline-workspace/src/csv.ts",
+      "file": "coding-task-live-20261018/baseline-workspace/src/csv.ts.txt",
+      "sourceSha256": "f8b21dcc55b6b776641be4ecafbed30de6791c838a10a7cddd67610d43162525",
+      "sha256": "f8b21dcc55b6b776641be4ecafbed30de6791c838a10a7cddd67610d43162525",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/baseline-workspace/src/import.ts",
+      "file": "coding-task-live-20261018/baseline-workspace/src/import.ts.txt",
+      "sourceSha256": "546f17bc50d7d0f7d05126bb06d8f47e1929b913d09d6ae00e7ea641d1aaa651",
+      "sha256": "546f17bc50d7d0f7d05126bb06d8f47e1929b913d09d6ae00e7ea641d1aaa651",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/baseline-workspace/test/csv.test.ts",
+      "file": "coding-task-live-20261018/baseline-workspace/test/csv.test.ts.txt",
+      "sourceSha256": "d3fe2eddcea38e062aae366ccd7b7c4a7b7a1042773451fa58e27d9012c2d206",
+      "sha256": "d3fe2eddcea38e062aae366ccd7b7c4a7b7a1042773451fa58e27d9012c2d206",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/check.log",
+      "file": "coding-task-live-20261018/check.log",
+      "sourceSha256": "dcdd500f32336f2795150ac80645bf4d6759387d35f37c81fde835e995ba7e2f",
+      "sha256": "dcdd500f32336f2795150ac80645bf4d6759387d35f37c81fde835e995ba7e2f",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/acceptance-results.json",
+      "file": "coding-task-live-20261018/comparison-1/acceptance-results.json",
+      "sourceSha256": "54df43f0e89f33b889f72283f85ed34077832d0e73539e232e5375ab9b8fa3eb",
+      "sha256": "54df43f0e89f33b889f72283f85ed34077832d0e73539e232e5375ab9b8fa3eb",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/baseline-acceptance.log",
+      "file": "coding-task-live-20261018/comparison-1/baseline-acceptance.log",
+      "sourceSha256": "f363cb5883dfc8424fab27061b061410dacb0c571dce55b6ccae9b033882d4d1",
+      "sha256": "a375b9d9a3222adf408f1b2131b17b42163fd29db6d377dd466c75dc3497e367",
+      "redacted": true
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/baseline-live.json",
+      "file": "coding-task-live-20261018/comparison-1/baseline-live.json",
+      "sourceSha256": "3211588c135d84a374d4a8691f876ff2ed9eae309fb613dd3460b4a16547e52d",
+      "sha256": "3211588c135d84a374d4a8691f876ff2ed9eae309fb613dd3460b4a16547e52d",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/baseline-plan.json",
+      "file": "coding-task-live-20261018/comparison-1/baseline-plan.json",
+      "sourceSha256": "45b045bee4626904f63735c2537f45936165da0f20700eec2dcb073a9e91c310",
+      "sha256": "45b045bee4626904f63735c2537f45936165da0f20700eec2dcb073a9e91c310",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/baseline-visible.log",
+      "file": "coding-task-live-20261018/comparison-1/baseline-visible.log",
+      "sourceSha256": "bfdef4f08a0e227c365a293e38f126b1e99aa91b91f600b3dbfe3c991228c1e2",
+      "sha256": "bfdef4f08a0e227c365a293e38f126b1e99aa91b91f600b3dbfe3c991228c1e2",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/baseline-worker.log",
+      "file": "coding-task-live-20261018/comparison-1/baseline-worker.log",
+      "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/baseline-workspace/README.md",
+      "file": "coding-task-live-20261018/comparison-1/baseline-workspace/README.md",
+      "sourceSha256": "192a2ef929ce22377d0b2d2eeac43e7200d419eb484ee271aaebad87a76e7a01",
+      "sha256": "192a2ef929ce22377d0b2d2eeac43e7200d419eb484ee271aaebad87a76e7a01",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/baseline-workspace/invalid.csv",
+      "file": "coding-task-live-20261018/comparison-1/baseline-workspace/invalid.csv",
+      "sourceSha256": "17a373d8a99cbc0238d1b1b87088915e04040adec99d3605d930099ee4f42df0",
+      "sha256": "17a373d8a99cbc0238d1b1b87088915e04040adec99d3605d930099ee4f42df0",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/baseline-workspace/sample.csv",
+      "file": "coding-task-live-20261018/comparison-1/baseline-workspace/sample.csv",
+      "sourceSha256": "8531b5894971a7496024dd796598a1a72bd58d01654ec53214a75cd4f3f9c6b6",
+      "sha256": "8531b5894971a7496024dd796598a1a72bd58d01654ec53214a75cd4f3f9c6b6",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/baseline-workspace/src/cli.ts",
+      "file": "coding-task-live-20261018/comparison-1/baseline-workspace/src/cli.ts.txt",
+      "sourceSha256": "30c03926f9cbca76249cf09b1664ca83e7978e888bb729e2deceeffb6b61d58e",
+      "sha256": "30c03926f9cbca76249cf09b1664ca83e7978e888bb729e2deceeffb6b61d58e",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/baseline-workspace/src/csv.ts",
+      "file": "coding-task-live-20261018/comparison-1/baseline-workspace/src/csv.ts.txt",
+      "sourceSha256": "6b5f4e5010a8f84917ae1916392e16adf00b0481061ea1fd3a40030e92c5852f",
+      "sha256": "6b5f4e5010a8f84917ae1916392e16adf00b0481061ea1fd3a40030e92c5852f",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/baseline-workspace/src/import.ts",
+      "file": "coding-task-live-20261018/comparison-1/baseline-workspace/src/import.ts.txt",
+      "sourceSha256": "cdaf40429d72bcaafb2d27647f78a7d78e53f4ab820450de354e4fed5640b6f8",
+      "sha256": "cdaf40429d72bcaafb2d27647f78a7d78e53f4ab820450de354e4fed5640b6f8",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/baseline-workspace/test/csv.test.ts",
+      "file": "coding-task-live-20261018/comparison-1/baseline-workspace/test/csv.test.ts.txt",
+      "sourceSha256": "d3fe2eddcea38e062aae366ccd7b7c4a7b7a1042773451fa58e27d9012c2d206",
+      "sha256": "d3fe2eddcea38e062aae366ccd7b7c4a7b7a1042773451fa58e27d9012c2d206",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/design.json",
+      "file": "coding-task-live-20261018/comparison-1/design.json",
+      "sourceSha256": "aa5c31d35cc5f1c9d4c9b48fa2f6dad55cf1b2226c86a7a0fe9c4dcd05f0c909",
+      "sha256": "aa5c31d35cc5f1c9d4c9b48fa2f6dad55cf1b2226c86a7a0fe9c4dcd05f0c909",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/offline-stop-reproduction.json",
+      "file": "coding-task-live-20261018/comparison-1/offline-stop-reproduction.json",
+      "sourceSha256": "13e2ab2fc9ec355c93365a473fb384d1d304849d767c810abf384107a50ec964",
+      "sha256": "13e2ab2fc9ec355c93365a473fb384d1d304849d767c810abf384107a50ec964",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/self-driving-acceptance.log",
+      "file": "coding-task-live-20261018/comparison-1/self-driving-acceptance.log",
+      "sourceSha256": "7966f7663ee3267107b5eb9f3b71a7b02ddbbffa5cc977d4c962b3aab809f73a",
+      "sha256": "a33a260e8e1078dd48056eb77266340f34ad65cd8504ca99e51865f50f6cfdda",
+      "redacted": true
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/self-driving-live.json",
+      "file": "coding-task-live-20261018/comparison-1/self-driving-live.json",
+      "sourceSha256": "567243f8e708286e2454be995e8384c717ac568c67c220a9bfb2c461ab76075c",
+      "sha256": "567243f8e708286e2454be995e8384c717ac568c67c220a9bfb2c461ab76075c",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/self-driving-plan.json",
+      "file": "coding-task-live-20261018/comparison-1/self-driving-plan.json",
+      "sourceSha256": "3b244282747c903287bb506c6784d213d6178c62ab08992b291fb8b38d47b279",
+      "sha256": "3b244282747c903287bb506c6784d213d6178c62ab08992b291fb8b38d47b279",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/self-driving-visible.log",
+      "file": "coding-task-live-20261018/comparison-1/self-driving-visible.log",
+      "sourceSha256": "8a4eccda59d52c5e7aa666b5f29bacee8720571290d520a2071cc1647c69c034",
+      "sha256": "99296b11d72261de20165642146a9483279f73a8f0f0f95650860d301861688c",
+      "redacted": true
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/self-driving-worker.log",
+      "file": "coding-task-live-20261018/comparison-1/self-driving-worker.log",
+      "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/self-driving-workspace/README.md",
+      "file": "coding-task-live-20261018/comparison-1/self-driving-workspace/README.md",
+      "sourceSha256": "192a2ef929ce22377d0b2d2eeac43e7200d419eb484ee271aaebad87a76e7a01",
+      "sha256": "192a2ef929ce22377d0b2d2eeac43e7200d419eb484ee271aaebad87a76e7a01",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/self-driving-workspace/invalid.csv",
+      "file": "coding-task-live-20261018/comparison-1/self-driving-workspace/invalid.csv",
+      "sourceSha256": "17a373d8a99cbc0238d1b1b87088915e04040adec99d3605d930099ee4f42df0",
+      "sha256": "17a373d8a99cbc0238d1b1b87088915e04040adec99d3605d930099ee4f42df0",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/self-driving-workspace/sample.csv",
+      "file": "coding-task-live-20261018/comparison-1/self-driving-workspace/sample.csv",
+      "sourceSha256": "8531b5894971a7496024dd796598a1a72bd58d01654ec53214a75cd4f3f9c6b6",
+      "sha256": "8531b5894971a7496024dd796598a1a72bd58d01654ec53214a75cd4f3f9c6b6",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/self-driving-workspace/src/cli.ts",
+      "file": "coding-task-live-20261018/comparison-1/self-driving-workspace/src/cli.ts.txt",
+      "sourceSha256": "30c03926f9cbca76249cf09b1664ca83e7978e888bb729e2deceeffb6b61d58e",
+      "sha256": "30c03926f9cbca76249cf09b1664ca83e7978e888bb729e2deceeffb6b61d58e",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/self-driving-workspace/src/csv.ts",
+      "file": "coding-task-live-20261018/comparison-1/self-driving-workspace/src/csv.ts.txt",
+      "sourceSha256": "d7ff0fc4919f8c5e0efe4f3c96f291a536bfbe26ee3307473e4e221a18223b64",
+      "sha256": "d7ff0fc4919f8c5e0efe4f3c96f291a536bfbe26ee3307473e4e221a18223b64",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/self-driving-workspace/src/import.ts",
+      "file": "coding-task-live-20261018/comparison-1/self-driving-workspace/src/import.ts.txt",
+      "sourceSha256": "754e4696cbf8759f60b8536425f7868e25d61416c3540da6aa627326ffa46ef8",
+      "sha256": "754e4696cbf8759f60b8536425f7868e25d61416c3540da6aa627326ffa46ef8",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/comparison-1/self-driving-workspace/test/csv.test.ts",
+      "file": "coding-task-live-20261018/comparison-1/self-driving-workspace/test/csv.test.ts.txt",
+      "sourceSha256": "d3fe2eddcea38e062aae366ccd7b7c4a7b7a1042773451fa58e27d9012c2d206",
+      "sha256": "d3fe2eddcea38e062aae366ccd7b7c4a7b7a1042773451fa58e27d9012c2d206",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/design.json",
+      "file": "coding-task-live-20261018/design.json",
+      "sourceSha256": "4b878b3a60d3cdaa5c19960c8a71d8ce5c480183c438f01d8d49c9bba23ecaee",
+      "sha256": "4b878b3a60d3cdaa5c19960c8a71d8ce5c480183c438f01d8d49c9bba23ecaee",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/initial-acceptance.log",
+      "file": "coding-task-live-20261018/initial-acceptance.log",
+      "sourceSha256": "d0670c96402da6cce053957a44e82a7316fbb1108238556b0d59b70dcea72895",
+      "sha256": "3412a8f8a18e43662ebc023a0a6fd4d2dba17a45bf52299b33da5c27b4502ff8",
+      "redacted": true
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/initial-tests.json",
+      "file": "coding-task-live-20261018/initial-tests.json",
+      "sourceSha256": "58f36b4f958c08e955fdbe3b97cc5d0bd3df01d673d8d18feb83aaff4f9124d2",
+      "sha256": "58f36b4f958c08e955fdbe3b97cc5d0bd3df01d673d8d18feb83aaff4f9124d2",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/initial-visible.log",
+      "file": "coding-task-live-20261018/initial-visible.log",
+      "sourceSha256": "b50d0f3be6b5902c1498ef19cd8c664cf519ca1e2169ca04d20a208260f231ff",
+      "sha256": "859dfd66b15a91ff06f0a85c3358ebf32eb27b3f1f28e7a0025e5e36595c9277",
+      "redacted": true
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/lint.log",
+      "file": "coding-task-live-20261018/lint.log",
+      "sourceSha256": "fa7cf377f29451a257de5360bc960d7b629b9ee3c70c615fe605158a9f1272db",
+      "sha256": "fa7cf377f29451a257de5360bc960d7b629b9ee3c70c615fe605158a9f1272db",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/post-fix/acceptance-results.json",
+      "file": "coding-task-live-20261018/post-fix/acceptance-results.json",
+      "sourceSha256": "8303275289be50e1bad799fdca656c53172b7487980b1f23d467756dd0d8f997",
+      "sha256": "8303275289be50e1bad799fdca656c53172b7487980b1f23d467756dd0d8f997",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/post-fix/design.json",
+      "file": "coding-task-live-20261018/post-fix/design.json",
+      "sourceSha256": "306d175be97a20950046eac8ace204760566bb9a4acb587096a42268f0cc3640",
+      "sha256": "306d175be97a20950046eac8ace204760566bb9a4acb587096a42268f0cc3640",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/post-fix/self-driving-acceptance.log",
+      "file": "coding-task-live-20261018/post-fix/self-driving-acceptance.log",
+      "sourceSha256": "b268dcec1c1534a029aa52b67d2fed35729ff28fb9dcd49ac9a371487fbaa10e",
+      "sha256": "1820ec4d01d547f14a9edc11e814923ba51138f144ba2d3a57efb794ea17588b",
+      "redacted": true
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/post-fix/self-driving-live.json",
+      "file": "coding-task-live-20261018/post-fix/self-driving-live.json",
+      "sourceSha256": "c8fecfa7a7f08b1885db7069961936d736e5b667031752480d66624b0abc6ce5",
+      "sha256": "c8fecfa7a7f08b1885db7069961936d736e5b667031752480d66624b0abc6ce5",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/post-fix/self-driving-plan.json",
+      "file": "coding-task-live-20261018/post-fix/self-driving-plan.json",
+      "sourceSha256": "d8f88e95310bb559f9fd7ec09774024ec7e1976ef4dca20e06ecb7b02db72e78",
+      "sha256": "d8f88e95310bb559f9fd7ec09774024ec7e1976ef4dca20e06ecb7b02db72e78",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/post-fix/self-driving-visible.log",
+      "file": "coding-task-live-20261018/post-fix/self-driving-visible.log",
+      "sourceSha256": "427e49502b0bb85d204de315cb84d4911b51e469236bbc870744e89e21963136",
+      "sha256": "52e9e9abf11b56639d4beefc765c515fc0f333c0e5793508c2e17aaba21466b5",
+      "redacted": true
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/post-fix/self-driving-worker.log",
+      "file": "coding-task-live-20261018/post-fix/self-driving-worker.log",
+      "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/post-fix/self-driving-workspace/README.md",
+      "file": "coding-task-live-20261018/post-fix/self-driving-workspace/README.md",
+      "sourceSha256": "192a2ef929ce22377d0b2d2eeac43e7200d419eb484ee271aaebad87a76e7a01",
+      "sha256": "192a2ef929ce22377d0b2d2eeac43e7200d419eb484ee271aaebad87a76e7a01",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/post-fix/self-driving-workspace/invalid.csv",
+      "file": "coding-task-live-20261018/post-fix/self-driving-workspace/invalid.csv",
+      "sourceSha256": "17a373d8a99cbc0238d1b1b87088915e04040adec99d3605d930099ee4f42df0",
+      "sha256": "17a373d8a99cbc0238d1b1b87088915e04040adec99d3605d930099ee4f42df0",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/post-fix/self-driving-workspace/sample.csv",
+      "file": "coding-task-live-20261018/post-fix/self-driving-workspace/sample.csv",
+      "sourceSha256": "8531b5894971a7496024dd796598a1a72bd58d01654ec53214a75cd4f3f9c6b6",
+      "sha256": "8531b5894971a7496024dd796598a1a72bd58d01654ec53214a75cd4f3f9c6b6",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/post-fix/self-driving-workspace/src/cli.ts",
+      "file": "coding-task-live-20261018/post-fix/self-driving-workspace/src/cli.ts.txt",
+      "sourceSha256": "30c03926f9cbca76249cf09b1664ca83e7978e888bb729e2deceeffb6b61d58e",
+      "sha256": "30c03926f9cbca76249cf09b1664ca83e7978e888bb729e2deceeffb6b61d58e",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/post-fix/self-driving-workspace/src/csv.ts",
+      "file": "coding-task-live-20261018/post-fix/self-driving-workspace/src/csv.ts.txt",
+      "sourceSha256": "4fead015570a434a307db8d4403d769ae5728a501600e0e8f350263cd506bdb9",
+      "sha256": "96232da76aa33bc9dad6b63e35c97e4eeaf4670b04bc31fab2fb879616ec6195",
+      "redacted": true
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/post-fix/self-driving-workspace/src/import.ts",
+      "file": "coding-task-live-20261018/post-fix/self-driving-workspace/src/import.ts.txt",
+      "sourceSha256": "a6073800332c33b95e58116758c681f677021879b5f586b96c989f4c93178e4a",
+      "sha256": "a6073800332c33b95e58116758c681f677021879b5f586b96c989f4c93178e4a",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/post-fix/self-driving-workspace/test/csv.test.ts",
+      "file": "coding-task-live-20261018/post-fix/self-driving-workspace/test/csv.test.ts.txt",
+      "sourceSha256": "d3fe2eddcea38e062aae366ccd7b7c4a7b7a1042773451fa58e27d9012c2d206",
+      "sha256": "d3fe2eddcea38e062aae366ccd7b7c4a7b7a1042773451fa58e27d9012c2d206",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/regression-red.log",
+      "file": "coding-task-live-20261018/regression-red.log",
+      "sourceSha256": "d5eb19669a390df9eaba16f3901ead5ec4503e2317e91acb8fb445e7b45423d8",
+      "sha256": "218b781c0c8331e77a79522364091eaeff71ef49a4ca51cbf6da8c7a62ef4156",
+      "redacted": true
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/regression.log",
+      "file": "coding-task-live-20261018/regression.log",
+      "sourceSha256": "e06b74f8a5862d0e3e09905b17dc130f76fa6d94b20fed05b0cd26a990d57380",
+      "sha256": "e06b74f8a5862d0e3e09905b17dc130f76fa6d94b20fed05b0cd26a990d57380",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/self-driving-plan.json",
+      "file": "coding-task-live-20261018/self-driving-plan.json",
+      "sourceSha256": "3b244282747c903287bb506c6784d213d6178c62ab08992b291fb8b38d47b279",
+      "sha256": "3b244282747c903287bb506c6784d213d6178c62ab08992b291fb8b38d47b279",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/self-driving-preflight-worker.log",
+      "file": "coding-task-live-20261018/self-driving-preflight-worker.log",
+      "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/self-driving-preflight.json",
+      "file": "coding-task-live-20261018/self-driving-preflight.json",
+      "sourceSha256": "e3f49063dde1dd336a3a8dfeffeac25dad8887a31bab6255a4fa1382c26bc0b5",
+      "sha256": "e3f49063dde1dd336a3a8dfeffeac25dad8887a31bab6255a4fa1382c26bc0b5",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/self-driving-workspace/README.md",
+      "file": "coding-task-live-20261018/self-driving-workspace/README.md",
+      "sourceSha256": "192a2ef929ce22377d0b2d2eeac43e7200d419eb484ee271aaebad87a76e7a01",
+      "sha256": "192a2ef929ce22377d0b2d2eeac43e7200d419eb484ee271aaebad87a76e7a01",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/self-driving-workspace/invalid.csv",
+      "file": "coding-task-live-20261018/self-driving-workspace/invalid.csv",
+      "sourceSha256": "17a373d8a99cbc0238d1b1b87088915e04040adec99d3605d930099ee4f42df0",
+      "sha256": "17a373d8a99cbc0238d1b1b87088915e04040adec99d3605d930099ee4f42df0",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/self-driving-workspace/sample.csv",
+      "file": "coding-task-live-20261018/self-driving-workspace/sample.csv",
+      "sourceSha256": "8531b5894971a7496024dd796598a1a72bd58d01654ec53214a75cd4f3f9c6b6",
+      "sha256": "8531b5894971a7496024dd796598a1a72bd58d01654ec53214a75cd4f3f9c6b6",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/self-driving-workspace/src/cli.ts",
+      "file": "coding-task-live-20261018/self-driving-workspace/src/cli.ts.txt",
+      "sourceSha256": "30c03926f9cbca76249cf09b1664ca83e7978e888bb729e2deceeffb6b61d58e",
+      "sha256": "30c03926f9cbca76249cf09b1664ca83e7978e888bb729e2deceeffb6b61d58e",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/self-driving-workspace/src/csv.ts",
+      "file": "coding-task-live-20261018/self-driving-workspace/src/csv.ts.txt",
+      "sourceSha256": "f9fdbd5f939ad0bdf4a88eada362a5b738af9e433a9fc1a509df600ef3b24584",
+      "sha256": "f9fdbd5f939ad0bdf4a88eada362a5b738af9e433a9fc1a509df600ef3b24584",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/self-driving-workspace/src/import.ts",
+      "file": "coding-task-live-20261018/self-driving-workspace/src/import.ts.txt",
+      "sourceSha256": "546f17bc50d7d0f7d05126bb06d8f47e1929b913d09d6ae00e7ea641d1aaa651",
+      "sha256": "546f17bc50d7d0f7d05126bb06d8f47e1929b913d09d6ae00e7ea641d1aaa651",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/self-driving-workspace/test/csv.test.ts",
+      "file": "coding-task-live-20261018/self-driving-workspace/test/csv.test.ts.txt",
+      "sourceSha256": "d3fe2eddcea38e062aae366ccd7b7c4a7b7a1042773451fa58e27d9012c2d206",
+      "sha256": "d3fe2eddcea38e062aae366ccd7b7c4a7b7a1042773451fa58e27d9012c2d206",
+      "redacted": false
+    },
+    {
+      "source": "artifacts/0.6.0-dev.0/coding-task-live-20261018/summary.json",
+      "file": "coding-task-live-20261018/summary.json",
+      "sourceSha256": "9631fa058c30103f137d2f47afebfb337ad70357f23ee21c94e3299310530b89",
+      "sha256": "47dd8adf91e9f7c6dff8330d0fdf196f979f0dccc48665fdecbd7f0f4636a1d0",
+      "redacted": true
+    }
+  ]
+}

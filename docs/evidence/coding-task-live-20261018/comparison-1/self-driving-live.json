@@ -1,0 +1,586 @@
+{
+  "schemaVersion": 1,
+  "arm": "self-driving",
+  "mode": "execute",
+  "planHash": "81d7155bcb14febfc175b8c77d8fd6ed4278bfcbbbb82a654d5af3b7c7fb958b",
+  "state": "failed",
+  "stage": "session",
+  "elapsedMs": 8639.133542000001,
+  "steps": 6,
+  "permissionRequests": 0,
+  "toolFailures": 0,
+  "availableTools": [
+    "edit",
+    "read",
+    "shell",
+    "write"
+  ],
+  "routes": [
+    {
+      "id": "bbf49965-db60-4c63-9536-d852ca156eba",
+      "sessionID": "ses_eae0ab442ffes1qkchzCct2dvS",
+      "revision": "a25de294-f192-478a-a7fc-0f630d23ad75",
+      "capacityRevision": "f9ac060a99dc0c96726d378e84bfa6fa8f8c72492b266e8ba0e9aeded211260c",
+      "kind": "primary",
+      "selection": "decision",
+      "tier": "low",
+      "eligibleTiers": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "excluded": [],
+      "backend": "coding",
+      "model": "openai/gpt-4.1-nano",
+      "physicalModel": "openai/gpt-4.1-nano",
+      "inputEstimate": 11249,
+      "outputTokens": 2048,
+      "resources": {
+        "mode": "inherit",
+        "outcome": "inherited",
+        "viewRevision": "b26d99c75bab70a45ddd0150a896f165338588e03d04c8d290537e985e5c4946",
+        "units": [],
+        "omitted": [],
+        "proposed": [],
+        "probabilities": {}
+      },
+      "decision": {
+        "service": "openrouter",
+        "requestedModel": "typesafe/jev-1.14",
+        "responseModel": "typesafe/jev-1.14-20261014",
+        "probabilities": {
+          "low": 0.4,
+          "medium": 0.39,
+          "high": 0.2,
+          "xhigh": 0,
+          "max": 0.01
+        },
+        "confidence": 0.25,
+        "inputTokens": 5295,
+        "outputTokens": 53,
+        "evidenceBytes": 12963,
+        "omitted": []
+      },
+      "generationUsage": {
+        "inputTokens": 1766,
+        "outputTokens": 48
+      }
+    },
+    {
+      "id": "8c0f2265-ae61-44bb-9034-11f54fc06b77",
+      "sessionID": "ses_eae0ab442ffes1qkchzCct2dvS",
+      "revision": "a25de294-f192-478a-a7fc-0f630d23ad75",
+      "capacityRevision": "f9ac060a99dc0c96726d378e84bfa6fa8f8c72492b266e8ba0e9aeded211260c",
+      "kind": "primary",
+      "selection": "decision",
+      "tier": "low",
+      "eligibleTiers": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "excluded": [],
+      "backend": "coding",
+      "model": "openai/gpt-4.1-nano",
+      "physicalModel": "openai/gpt-4.1-nano",
+      "inputEstimate": 12244,
+      "outputTokens": 2048,
+      "resources": {
+        "mode": "inherit",
+        "outcome": "inherited",
+        "viewRevision": "cd6e3943e6fc2df8260bf2eb21dcb962c89f07b26868be6901bdb9cf35187d2a",
+        "units": [],
+        "omitted": [],
+        "proposed": [],
+        "probabilities": {}
+      },
+      "decision": {
+        "service": "openrouter",
+        "requestedModel": "typesafe/jev-1.14",
+        "responseModel": "typesafe/jev-1.14-20261014",
+        "probabilities": {
+          "low": 0.45,
+          "medium": 0.34,
+          "high": 0.2,
+          "xhigh": 0,
+          "max": 0.01
+        },
+        "confidence": 0.31,
+        "inputTokens": 5839,
+        "outputTokens": 53,
+        "evidenceBytes": 14158,
+        "omitted": []
+      },
+      "generationUsage": {
+        "inputTokens": 1969,
+        "outputTokens": 348
+      }
+    },
+    {
+      "id": "22406eed-2ea8-462f-a6b8-970af4489917",
+      "sessionID": "ses_eae0ab442ffes1qkchzCct2dvS",
+      "revision": "a25de294-f192-478a-a7fc-0f630d23ad75",
+      "capacityRevision": "f9ac060a99dc0c96726d378e84bfa6fa8f8c72492b266e8ba0e9aeded211260c",
+      "kind": "primary",
+      "selection": "decision",
+      "tier": "low",
+      "eligibleTiers": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "excluded": [],
+      "backend": "coding",
+      "model": "openai/gpt-4.1-nano",
+      "physicalModel": "openai/gpt-4.1-nano",
+      "inputEstimate": 13778,
+      "outputTokens": 2048,
+      "resources": {
+        "mode": "inherit",
+        "outcome": "inherited",
+        "viewRevision": "96a24ae91ed434c7f167a874f8ec04a50e9a742e855a09d15320f8a3fc0333c1",
+        "units": [],
+        "omitted": [],
+        "proposed": [],
+        "probabilities": {}
+      },
+      "decision": {
+        "service": "openrouter",
+        "requestedModel": "typesafe/jev-1.14",
+        "responseModel": "typesafe/jev-1.14-20261014",
+        "probabilities": {
+          "low": 0.44,
+          "medium": 0.35,
+          "high": 0.2,
+          "xhigh": 0,
+          "max": 0.01
+        },
+        "confidence": 0.3,
+        "inputTokens": 6348,
+        "outputTokens": 53,
+        "evidenceBytes": 15722,
+        "omitted": []
+      },
+      "generationUsage": {
+        "inputTokens": 2330,
+        "outputTokens": 16
+      }
+    },
+    {
+      "id": "4603c65c-2c23-4dd2-bb6a-3ddfdce20131",
+      "sessionID": "ses_eae0ab442ffes1qkchzCct2dvS",
+      "revision": "a25de294-f192-478a-a7fc-0f630d23ad75",
+      "capacityRevision": "f9ac060a99dc0c96726d378e84bfa6fa8f8c72492b266e8ba0e9aeded211260c",
+      "kind": "primary",
+      "selection": "decision",
+      "tier": "low",
+      "eligibleTiers": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "excluded": [],
+      "backend": "coding",
+      "model": "openai/gpt-4.1-nano",
+      "physicalModel": "openai/gpt-4.1-nano",
+      "inputEstimate": 14379,
+      "outputTokens": 2048,
+      "resources": {
+        "mode": "inherit",
+        "outcome": "inherited",
+        "viewRevision": "76cabbd0bee9c1de0e838d48f0c71cefaafec0bb4c19d93b852a5ab869b9d335",
+        "units": [],
+        "omitted": [],
+        "proposed": [],
+        "probabilities": {}
+      },
+      "decision": {
+        "service": "openrouter",
+        "requestedModel": "typesafe/jev-1.14",
+        "responseModel": "typesafe/jev-1.14-20261014",
+        "probabilities": {
+          "low": 0.43,
+          "medium": 0.38,
+          "high": 0.19,
+          "xhigh": 0,
+          "max": 0
+        },
+        "confidence": 0.29,
+        "inputTokens": 6668,
+        "outputTokens": 53,
+        "evidenceBytes": 16433,
+        "omitted": []
+      },
+      "generationUsage": {
+        "inputTokens": 2450,
+        "outputTokens": 173
+      }
+    },
+    {
+      "id": "d4a19015-6710-4ae5-9c0a-254671e9b99b",
+      "sessionID": "ses_eae0ab442ffes1qkchzCct2dvS",
+      "revision": "a25de294-f192-478a-a7fc-0f630d23ad75",
+      "capacityRevision": "f9ac060a99dc0c96726d378e84bfa6fa8f8c72492b266e8ba0e9aeded211260c",
+      "kind": "primary",
+      "selection": "decision",
+      "tier": "low",
+      "eligibleTiers": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "excluded": [],
+      "backend": "coding",
+      "model": "openai/gpt-4.1-nano",
+      "physicalModel": "openai/gpt-4.1-nano",
+      "inputEstimate": 15261,
+      "outputTokens": 2048,
+      "resources": {
+        "mode": "inherit",
+        "outcome": "inherited",
+        "viewRevision": "56d332a8213029778cb418f7f3b710fd990e64541d61df479b99c5494fa379a3",
+        "units": [],
+        "omitted": [],
+        "proposed": [],
+        "probabilities": {}
+      },
+      "decision": {
+        "service": "openrouter",
+        "requestedModel": "typesafe/jev-1.14",
+        "responseModel": "typesafe/jev-1.14-20261014",
+        "probabilities": {
+          "low": 0.49,
+          "medium": 0.35,
+          "high": 0.15,
+          "xhigh": 0,
+          "max": 0.01
+        },
+        "confidence": 0.36,
+        "inputTokens": 7041,
+        "outputTokens": 53,
+        "evidenceBytes": 17396,
+        "omitted": []
+      },
+      "generationUsage": {
+        "inputTokens": 2637,
+        "outputTokens": 94
+      }
+    },
+    {
+      "id": "e3f34e54-ad03-4e49-aeb3-948e22447f0b",
+      "sessionID": "ses_eae0ab442ffes1qkchzCct2dvS",
+      "revision": "a25de294-f192-478a-a7fc-0f630d23ad75",
+      "capacityRevision": "f9ac060a99dc0c96726d378e84bfa6fa8f8c72492b266e8ba0e9aeded211260c",
+      "kind": "primary",
+      "selection": "decision",
+      "tier": "high",
+      "eligibleTiers": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "excluded": [],
+      "backend": "coding",
+      "model": "openai/gpt-4.1-mini",
+      "physicalModel": "openai/gpt-4.1-mini",
+      "inputEstimate": 18827,
+      "outputTokens": 2048,
+      "resources": {
+        "mode": "inherit",
+        "outcome": "inherited",
+        "viewRevision": "90317902e7a3ced0cb83d5c9940557fe8716279890a991c236698821bb991440",
+        "units": [],
+        "omitted": [],
+        "proposed": [],
+        "probabilities": {}
+      },
+      "decision": {
+        "service": "openrouter",
+        "requestedModel": "typesafe/jev-1.14",
+        "responseModel": "typesafe/jev-1.14-20261014",
+        "probabilities": {
+          "low": 0.25,
+          "medium": 0.32,
+          "high": 0.42,
+          "xhigh": 0,
+          "max": 0.01
+        },
+        "confidence": 0.27,
+        "inputTokens": 8355,
+        "outputTokens": 53,
+        "evidenceBytes": 21160,
+        "omitted": []
+      }
+    }
+  ],
+  "tools": [
+    {
+      "id": "call_XUcBTFmFTqlmAIPmZ9aDWS5T",
+      "tool": "read",
+      "status": "completed",
+      "path": "src/csv.ts"
+    },
+    {
+      "id": "call_4cUoNq194oZsQAX0DFuaK5RN",
+      "tool": "read",
+      "status": "completed",
+      "path": "src/import.ts"
+    },
+    {
+      "id": "call_xQwRLigKNwHQAoa5zVJEEY1h",
+      "tool": "edit",
+      "status": "completed",
+      "path": "src/csv.ts"
+    },
+    {
+      "id": "call_BvUkci1JpPr649QkXm7V1alu",
+      "tool": "read",
+      "status": "completed",
+      "path": "src/import.ts"
+    },
+    {
+      "id": "call_1IqlkJhFhSvQhF5nKxi2uwOI",
+      "tool": "edit",
+      "status": "completed",
+      "path": "src/import.ts"
+    },
+    {
+      "id": "call_isbXCIJh8Cx8oFdUvMF3nYSh",
+      "tool": "shell",
+      "status": "completed",
+      "command": "bun test"
+    }
+  ],
+  "requests": [
+    {
+      "target": 0,
+      "kind": "decision",
+      "model": "typesafe/jev-1.14",
+      "inputBytes": 15050,
+      "responseBytes": 319,
+      "elapsedMs": 292.7141670000001,
+      "outcome": "complete",
+      "status": 200
+    },
+    {
+      "target": 1,
+      "kind": "generation",
+      "model": "openai/gpt-4.1-nano",
+      "inputBytes": 9201,
+      "outputLimit": 2048,
+      "responseBytes": 3207,
+      "elapsedMs": 1065.480625,
+      "outcome": "complete",
+      "status": 200
+    },
+    {
+      "target": 0,
+      "kind": "decision",
+      "model": "typesafe/jev-1.14",
+      "inputBytes": 16245,
+      "responseBytes": 321,
+      "elapsedMs": 157.88308400000005,
+      "outcome": "complete",
+      "status": 200
+    },
+    {
+      "target": 1,
+      "kind": "generation",
+      "model": "openai/gpt-4.1-nano",
+      "inputBytes": 10196,
+      "outputLimit": 2048,
+      "responseBytes": 114244,
+      "elapsedMs": 2157.8597910000003,
+      "outcome": "complete",
+      "status": 200
+    },
+    {
+      "target": 0,
+      "kind": "decision",
+      "model": "typesafe/jev-1.14",
+      "inputBytes": 17809,
+      "responseBytes": 320,
+      "elapsedMs": 172.24845800000003,
+      "outcome": "complete",
+      "status": 200
+    },
+    {
+      "target": 1,
+      "kind": "generation",
+      "model": "openai/gpt-4.1-nano",
+      "inputBytes": 11730,
+      "outputLimit": 2048,
+      "responseBytes": 4099,
+      "elapsedMs": 888.0298330000005,
+      "outcome": "complete",
+      "status": 200
+    },
+    {
+      "target": 0,
+      "kind": "decision",
+      "model": "typesafe/jev-1.14",
+      "inputBytes": 18520,
+      "responseBytes": 319,
+      "elapsedMs": 242.10783300000003,
+      "outcome": "complete",
+      "status": 200
+    },
+    {
+      "target": 1,
+      "kind": "generation",
+      "model": "openai/gpt-4.1-nano",
+      "inputBytes": 12331,
+      "outputLimit": 2048,
+      "responseBytes": 56187,
+      "elapsedMs": 1557.150458,
+      "outcome": "complete",
+      "status": 200
+    },
+    {
+      "target": 0,
+      "kind": "decision",
+      "model": "typesafe/jev-1.14",
+      "inputBytes": 19483,
+      "responseBytes": 322,
+      "elapsedMs": 161.01187500000015,
+      "outcome": "complete",
+      "status": 200
+    },
+    {
+      "target": 1,
+      "kind": "generation",
+      "model": "openai/gpt-4.1-nano",
+      "inputBytes": 13213,
+      "outputLimit": 2048,
+      "responseBytes": 25014,
+      "elapsedMs": 1318.6516659999998,
+      "outcome": "complete",
+      "status": 200
+    },
+    {
+      "target": 0,
+      "kind": "decision",
+      "model": "typesafe/jev-1.14",
+      "inputBytes": 23247,
+      "responseBytes": 322,
+      "elapsedMs": 210.02858399999968,
+      "outcome": "complete",
+      "status": 200
+    }
+  ],
+  "budget": {
+    "inputBytes": 167025,
+    "responseBytes": 204674,
+    "blocked": 0
+  },
+  "catalogCost": 0,
+  "messages": [
+    {
+      "model": "auto",
+      "finish": "tool-calls",
+      "tokens": {
+        "input": 1766,
+        "output": 48,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      }
+    },
+    {
+      "model": "auto",
+      "finish": "tool-calls",
+      "tokens": {
+        "input": 305,
+        "output": 348,
+        "reasoning": 0,
+        "cache": {
+          "read": 1664,
+          "write": 0
+        }
+      }
+    },
+    {
+      "model": "auto",
+      "finish": "tool-calls",
+      "tokens": {
+        "input": 410,
+        "output": 16,
+        "reasoning": 0,
+        "cache": {
+          "read": 1920,
+          "write": 0
+        }
+      }
+    },
+    {
+      "model": "auto",
+      "finish": "tool-calls",
+      "tokens": {
+        "input": 274,
+        "output": 173,
+        "reasoning": 0,
+        "cache": {
+          "read": 2176,
+          "write": 0
+        }
+      }
+    },
+    {
+      "model": "auto",
+      "finish": "tool-calls",
+      "tokens": {
+        "input": 333,
+        "output": 94,
+        "reasoning": 0,
+        "cache": {
+          "read": 2304,
+          "write": 0
+        }
+      }
+    },
+    {
+      "model": "auto",
+      "finish": "error"
+    }
+  ],
+  "finalText": {
+    "length": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "fileHashes": {
+    "before": {
+      "README.md": "192a2ef929ce22377d0b2d2eeac43e7200d419eb484ee271aaebad87a76e7a01",
+      "src/csv.ts": "f8b21dcc55b6b776641be4ecafbed30de6791c838a10a7cddd67610d43162525",
+      "src/import.ts": "546f17bc50d7d0f7d05126bb06d8f47e1929b913d09d6ae00e7ea641d1aaa651",
+      "src/cli.ts": "30c03926f9cbca76249cf09b1664ca83e7978e888bb729e2deceeffb6b61d58e",
+      "test/csv.test.ts": "d3fe2eddcea38e062aae366ccd7b7c4a7b7a1042773451fa58e27d9012c2d206",
+      "sample.csv": "8531b5894971a7496024dd796598a1a72bd58d01654ec53214a75cd4f3f9c6b6",
+      "invalid.csv": "17a373d8a99cbc0238d1b1b87088915e04040adec99d3605d930099ee4f42df0"
+    },
+    "after": {
+      "README.md": "192a2ef929ce22377d0b2d2eeac43e7200d419eb484ee271aaebad87a76e7a01",
+      "src/csv.ts": "d7ff0fc4919f8c5e0efe4f3c96f291a536bfbe26ee3307473e4e221a18223b64",
+      "src/import.ts": "754e4696cbf8759f60b8536425f7868e25d61416c3540da6aa627326ffa46ef8",
+      "src/cli.ts": "30c03926f9cbca76249cf09b1664ca83e7978e888bb729e2deceeffb6b61d58e",
+      "test/csv.test.ts": "d3fe2eddcea38e062aae366ccd7b7c4a7b7a1042773451fa58e27d9012c2d206",
+      "sample.csv": "8531b5894971a7496024dd796598a1a72bd58d01654ec53214a75cd4f3f9c6b6",
+      "invalid.csv": "17a373d8a99cbc0238d1b1b87088915e04040adec99d3605d930099ee4f42df0"
+    }
+  },
+  "quality": "single-task-only; not-qualified",
+  "billing": "not-measured; catalog cost excludes decision service and is not a physical bill"
+}

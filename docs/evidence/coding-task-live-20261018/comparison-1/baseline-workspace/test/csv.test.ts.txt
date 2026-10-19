@@ -1,0 +1,25 @@
+import { expect, test } from "bun:test"
+import { parseCsv } from "../src/csv"
+import { importCsv } from "../src/import"
+
+test("imports ordinary records", () => {
+  expect(importCsv("name,city\nAda,London\n")).toEqual([{ name: "Ada", city: "London" }])
+})
+
+test("quoted commas and escaped quotes", () => {
+  expect(parseCsv('a,"b,c","say ""hi"""')).toEqual([["a", "b,c", 'say "hi"']])
+})
+
+test("preserves embedded newlines", () => {
+  expect(importCsv('id,note\r\n7,"first\r\nsecond"\r\n')).toEqual([{ id: "7", note: "first\r\nsecond" }])
+})
+
+test("empty input", () => {
+  expect(parseCsv("")).toEqual([])
+  expect(importCsv("")).toEqual([])
+})
+
+test("rejects ambiguous headers and mismatched rows", () => {
+  expect(() => importCsv("id,id\na,b")).toThrow()
+  expect(() => importCsv("id,note\na")).toThrow()
+})

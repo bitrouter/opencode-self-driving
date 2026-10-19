@@ -1,0 +1,102 @@
+import { expect, test } from "bun:test"
+import { join } from "node:path"
+
+const directory = process.env.CODING_TASK_ROOT
+if (!directory) throw new Error("CODING_TASK_ROOT is required")
+const { parseCsv } = await import(join(directory, "src/csv.ts"))
+const { importCsv } = await import(join(directory, "src/import.ts"))
+
+test("empty file and header-only file", () => {
+  expect(parseCsv("")).toEqual([])
+  expect(importCsv("a,b\r\n")).toEqual([])
+})
+
+test("record terminators do not invent a final record", () => {
+  expect(parseCsv("a\n")).toEqual([["a"]])
+  expect(parseCsv("a\n\n")).toEqual([["a"], [""]])
+  expect(parseCsv("\n")).toEqual([[""]])
+  expect(parseCsv("\r\n\r\n")).toEqual([[""], [""]])
+})
+
+test("empty fields and empty quoted fields", () => {
+  expect(parseCsv(',"",\r\n,,')).toEqual([["", "", ""], ["", "", ""]])
+})
+
+test("field whitespace is preserved", () => {
+  expect(importCsv(' name ,note\n Ada ,"  spaced  "\n')).toEqual([{ " name ": " Ada ", note: "  spaced  " }])
+})
+
+test("quoted delimiters and escaped quotation marks", () => {
+  expect(parseCsv('"a,b","""quoted""",tail')).toEqual([["a,b", '"quoted"', "tail"]])
+})
+
+test("quoted newlines preserve their bytes", () => {
+  expect(parseCsv('a,"b\nc\r\nd\re",f\r\n')).toEqual([["a", "b\nc\r\nd\re", "f"]])
+})
+
+test("only the leading BOM is stripped", () => {
+  expect(parseCsv('\uFEFFa,"\uFEFFb"\n')).toEqual([["a", "\uFEFFb"]])
+  expect(parseCsv("\uFEFF")).toEqual([])
+})
+
+test("unterminated quoted field is rejected", () => {
+  expect(() => parseCsv('a,"unterminated')).toThrow(Error)
+})
+
+test("quotes in unquoted fields are rejected", () => {
+  expect(() => parseCsv('ab"cd,e')).toThrow(Error)
+})
+
+test("characters after closing quote are rejected", () => {
+  expect(() => parseCsv('"abc"x,def')).toThrow(Error)
+  expect(() => parseCsv('"abc" ,def')).toThrow(Error)
+})
+
+test("bare CR outside quotes is rejected", () => {
+  expect(() => parseCsv("a\rb")).toThrow(Error)
+})
+
+test("duplicate and empty headers are rejected", () => {
+  expect(() => importCsv("a,a\n1,2")).toThrow(Error)
+  expect(() => importCsv(",b\n1,2")).toThrow(Error)
+})
+
+test("both short and long records are rejected", () => {
+  expect(() => importCsv("a,b\n1")).toThrow(Error)
+  expect(() => importCsv("a,b\n1,2,3")).toThrow(Error)
+})
+
+test("special header names are ordinary own properties", () => {
+  const record = importCsv("__proto__,constructor\none,two")[0]
+  expect(Object.hasOwn(record, "__proto__")).toBe(true)
+  expect(record.__proto__).toBe("one")
+  expect(Object.hasOwn(record, "constructor")).toBe(true)
+  expect(record.constructor).toBe("two")
+})
+
+test("CLI imports a multiline file", async () => {
+  const process = Bun.spawn([Bun.which("bun")!, "src/cli.ts", "sample.csv"], {
+    cwd: directory,
+    stdout: "pipe",
+    stderr: "pipe",
+  })
+  const [exit, output] = await Promise.all([process.exited, new Response(process.stdout).text()])
+  expect(exit).toBe(0)
+  expect(JSON.parse(output)).toEqual([{ name: "Ada, A.", note: 'line 1\nline "2"' }])
+})
+
+test("CLI rejects malformed CSV", async () => {
+  const process = Bun.spawn([Bun.which("bun")!, "src/cli.ts", "invalid.csv"], {
+    cwd: directory,
+    stdout: "pipe",
+    stderr: "pipe",
+  })
+  const [exit, output, error] = await Promise.all([
+    process.exited,
+    new Response(process.stdout).text(),
+    new Response(process.stderr).text(),
+  ])
+  expect(exit).toBe(1)
+  expect(output).toBe("")
+  expect(error).toContain("Invalid CSV")
+})

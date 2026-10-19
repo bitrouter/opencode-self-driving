@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "profile": {
+    "schemaVersion": 1,
+    "name": "REVIEW_AND_PIN_BEFORE_EXECUTION",
+    "backends": {
+      "coding": {
+        "service": "openrouter",
+        "providerID": "openrouter",
+        "auth": { "type": "integration", "integrationID": "openrouter" }
+      }
+    },
+    "decision": {
+      "service": "openrouter",
+      "model": "REPLACE_WITH_PINNED_EVALUATION_MODEL",
+      "allowedResponseModels": ["REPLACE_WITH_ACCEPTED_RESPONSE_MODEL"],
+      "auth": { "type": "integration", "integrationID": "openrouter" },
+      "maxInputBytes": 0,
+      "maxInputTokens": 0
+    },
+    "tiers": {
+      "low": { "backend": "coding", "model": "REPLACE_WITH_LOW_MODEL" },
+      "medium": { "backend": "coding", "model": "REPLACE_WITH_MEDIUM_MODEL" },
+      "high": { "backend": "coding", "model": "REPLACE_WITH_HIGH_MODEL" },
+      "xhigh": { "backend": "coding", "model": "REPLACE_WITH_XHIGH_MODEL" },
+      "max": { "backend": "coding", "model": "REPLACE_WITH_MAX_MODEL" }
+    },
+    "auxiliary": {
+      "title": { "backend": "coding", "model": "REPLACE_WITH_TITLE_MODEL" },
+      "compaction": { "backend": "coding", "model": "REPLACE_WITH_LARGE_COMPACTION_MODEL" },
+      "generate": { "backend": "coding", "model": "REPLACE_WITH_GENERATE_MODEL" }
+    },
+    "outputTokens": 0,
+    "overheadTokens": 0,
+    "preparationTimeoutMs": 0,
+    "evidence": { "mode": "bounded", "maxBytes": 0, "maxTokens": 0 },
+    "resources": { "tauOmit": 0 },
+    "approval": { "tauAllow": 0, "timeoutMs": 0, "maxBytes": 0, "maxTokens": 0, "mcpServers": ["qualification"] }
+  },
+  "endpoints": {
+    "decision": "https://REPLACE_WITH_REVIEWED_DECISION_ENDPOINT",
+    "backends": { "coding": "https://REPLACE_WITH_REVIEWED_GENERATION_ENDPOINT" }
+  },
+  "credentials": { "openrouter": "OPENROUTER_API_KEY" },
+  "limits": {
+    "maxRequests": 0,
+    "maxOutputTokens": 0,
+    "maxDurationMs": 0,
+    "maxInputBytes": 0,
+    "maxResponseBytes": 0,
+    "maxStepsPerCase": 0
+  },
+  "cases": [
+    {
+      "id": "text-connectivity-literal-v2",
+      "split": "tuning",
+      "prompt": "Output exactly these 18 ASCII characters, with no surrounding characters:\nQUALIFICATION_TEXT\nThe first character must be Q and the last must be T. Do not add angle brackets, quotation marks, Markdown, explanations, or extra text.",
+      "expectedText": "QUALIFICATION_TEXT",
+      "acceptableTiers": [],
+      "contextSelection": "shadow",
+      "approval": "off",
+      "resources": [
+        {
+          "id": "unrelated",
+          "text": "Unrelated reference: this project once used a blue icon.",
+          "required": false,
+          "needed": false
+        }
+      ]
+    },
+    {
+      "id": "mcp-continuation",
+      "split": "holdout",
+      "prompt": "Call qualification_echo exactly once with {\"text\":\"QUALIFICATION_ECHO\"}. You are authorized to call this local echo tool with those exact parameters. After its result, reply exactly QUALIFICATION_DONE.",
+      "expectedText": "QUALIFICATION_DONE",
+      "acceptableTiers": [],
+      "contextSelection": "inherit",
+      "approval": "shadow",
+      "resources": [],
+      "tool": { "text": "QUALIFICATION_ECHO", "needsHuman": false }
+    }
+  ]
+}

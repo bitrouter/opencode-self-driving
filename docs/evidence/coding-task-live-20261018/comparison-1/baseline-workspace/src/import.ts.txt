@@ -1,0 +1,33 @@
+import { parseCsv } from "./csv"
+
+export function importCsv(text: string): Record<string, string>[] {
+  const [headers, ...rows] = parseCsv(text)
+  if (!headers) return []
+
+  // Validate headers
+  const headerSet = new Set<string>()
+  for (const header of headers) {
+    if (header === '') {
+      throw new Error('Empty header names are not allowed')
+    }
+    if (headerSet.has(header)) {
+      throw new Error('Duplicate header names not allowed')
+    }
+    headerSet.add(header)
+  }
+
+  // Validate rows
+  for (const row of rows) {
+    if (row.length !== headers.length) {
+      throw new Error('Row length does not match header length')
+    }
+  }
+
+  return rows.map((row) => {
+    const obj: Record<string, string> = {}
+    for (let i = 0; i < headers.length; i++) {
+      obj[headers[i]] = row[i]
+    }
+    return obj
+  })
+}

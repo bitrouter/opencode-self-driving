@@ -1,0 +1,104 @@
+bun test v1.4.2 (744846f84)
+
+test/csv.test.ts:
+(pass) imports ordinary records [0.64ms]
+ 5 | test("imports ordinary records", () => {
+ 6 |   expect(importCsv("name,city\nAda,London\n")).toEqual([{ name: "Ada", city: "London" }])
+ 7 | })
+ 8 |
+ 9 | test("quoted commas and escaped quotes", () => {
+10 |   expect(parseCsv('a,"b,c","say ""hi"""')).toEqual([["a", "b,c", 'say "hi"']])
+                                                ^
+error: expect(received).toEqual(expected)
+
+  [
+    [
+      "a",
+-     "b,c",
+-     "say "hi"",
++     ""b",
++     "c"",
++     ""say ""hi"""",
+    ],
+  ]
+
+- Expected  - 2
++ Received  + 3
+
+      at <anonymous> (<opencode-checkout>/opencode-self-driving/artifacts/0.6.0-dev.0/coding-task-live-20261018/baseline-workspace/test/csv.test.ts:10:44)
+(fail) quoted commas and escaped quotes [1.06ms]
+ 9 | test("quoted commas and escaped quotes", () => {
+10 |   expect(parseCsv('a,"b,c","say ""hi"""')).toEqual([["a", "b,c", 'say "hi"']])
+11 | })
+12 |
+13 | test("preserves embedded newlines", () => {
+14 |   expect(importCsv('id,note\r\n7,"first\r\nsecond"\r\n')).toEqual([{ id: "7", note: "first\r\nsecond" }])
+                                                               ^
+error: expect(received).toEqual(expected)
+
+  [
+    {
+      "id": "7",
+-     "note":
+- "first
+- second"
++     "note\r":
++ ""first
++ "
+  ,
++   },
++   {
++     "id": "second"",
++     "note\r": "",
+    },
+  ]
+
+- Expected  - 3
++ Received  + 7
+
+      at <anonymous> (<opencode-checkout>/opencode-self-driving/artifacts/0.6.0-dev.0/coding-task-live-20261018/baseline-workspace/test/csv.test.ts:14:59)
+(fail) preserves embedded newlines [0.31ms]
+13 | test("preserves embedded newlines", () => {
+14 |   expect(importCsv('id,note\r\n7,"first\r\nsecond"\r\n')).toEqual([{ id: "7", note: "first\r\nsecond" }])
+15 | })
+16 |
+17 | test("empty input", () => {
+18 |   expect(parseCsv("")).toEqual([])
+                            ^
+error: expect(received).toEqual(expected)
+
+- []
++ [
++   [
++     "",
++   ],
++ ]
+
+- Expected  - 1
++ Received  + 5
+
+      at <anonymous> (<opencode-checkout>/opencode-self-driving/artifacts/0.6.0-dev.0/coding-task-live-20261018/baseline-workspace/test/csv.test.ts:18:24)
+(fail) empty input [0.04ms]
+18 |   expect(parseCsv("")).toEqual([])
+19 |   expect(importCsv("")).toEqual([])
+20 | })
+21 |
+22 | test("rejects ambiguous headers and mismatched rows", () => {
+23 |   expect(() => importCsv("id,id\na,b")).toThrow()
+                                             ^
+error: expect(received).toThrow()
+
+Received function did not throw
+Received value: [
+  {
+    id: "b",
+  }
+]
+
+      at <anonymous> (<opencode-checkout>/opencode-self-driving/artifacts/0.6.0-dev.0/coding-task-live-20261018/baseline-workspace/test/csv.test.ts:23:41)
+(fail) rejects ambiguous headers and mismatched rows [0.38ms]
+
+ 1 pass
+ 4 fail
+ 5 expect() calls
+Ran 5 tests across 1 file. [11.00ms]

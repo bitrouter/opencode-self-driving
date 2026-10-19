@@ -1,0 +1,6 @@
+export function parseCsv(text: string): string[][] {
+  return text
+    .trim()
+    .split("\n")
+    .map((line) => line.split(","))
+}

@@ -1,0 +1,54 @@
+bun test v1.4.2 (744846f84)
+
+../../../../../../../../../../../private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-ltecyflg/acceptance.test.ts:
+(pass) empty file and header-only file [0.17ms]
+(pass) record terminators do not invent a final record [0.02ms]
+(pass) empty fields and empty quoted fields
+(pass) field whitespace is preserved [0.04ms]
+(pass) quoted delimiters and escaped quotation marks
+(pass) quoted newlines preserve their bytes
+(pass) only the leading BOM is stripped
+38 |   expect(parseCsv('\uFEFFa,"\uFEFFb"\n')).toEqual([["a", "\uFEFFb"]])
+39 |   expect(parseCsv("\uFEFF")).toEqual([])
+40 | })
+41 |
+42 | test("unterminated quoted field is rejected", () => {
+43 |   expect(() => parseCsv('a,"unterminated')).toThrow(Error)
+                                                 ^
+error: expect(received).toThrow(expected)
+
+Expected constructor: Error
+
+Received function did not throw
+Received value: [
+  [ "a", "unterminated" ]
+]
+
+      at <anonymous> (/private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-ltecyflg/acceptance.test.ts:43:45)
+(fail) unterminated quoted field is rejected [0.12ms]
+(pass) quotes in unquoted fields are rejected [0.03ms]
+(pass) characters after closing quote are rejected [0.01ms]
+(pass) bare CR outside quotes is rejected
+(pass) duplicate and empty headers are rejected [0.07ms]
+(pass) both short and long records are rejected [0.02ms]
+66 |   expect(() => importCsv("a,b\n1,2,3")).toThrow(Error)
+67 | })
+68 |
+69 | test("special header names are ordinary own properties", () => {
+70 |   const record = importCsv("__proto__,constructor\none,two")[0]
+71 |   expect(Object.hasOwn(record, "__proto__")).toBe(true)
+                                                  ^
+error: expect(received).toBe(expected)
+
+Expected: true
+Received: false
+
+      at <anonymous> (/private/var/folders/q1/xrnmtfy96_30yfqx4sqkh6l40000gn/T/self-driving-coding-acceptance-ltecyflg/acceptance.test.ts:71:46)
+(fail) special header names are ordinary own properties [0.31ms]
+(pass) CLI imports a multiline file [6.91ms]
+(pass) CLI rejects malformed CSV [8.02ms]
+
+ 14 pass
+ 2 fail
+ 27 expect() calls
+Ran 16 tests across 1 file. [39.00ms]

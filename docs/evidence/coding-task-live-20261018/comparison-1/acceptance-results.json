@@ -1,0 +1,58 @@
+[
+  {
+    "arm": "baseline",
+    "suites": [
+      {
+        "name": "visible",
+        "exitCode": 0,
+        "tests": 5,
+        "passed": 5,
+        "failed": []
+      },
+      {
+        "name": "acceptance",
+        "exitCode": 1,
+        "tests": 16,
+        "passed": 14,
+        "failed": [
+          "unterminated quoted field is rejected",
+          "special header names are ordinary own properties"
+        ]
+      }
+    ]
+  },
+  {
+    "arm": "self-driving",
+    "suites": [
+      {
+        "name": "visible",
+        "exitCode": 1,
+        "tests": 5,
+        "passed": 1,
+        "failed": [
+          "imports ordinary records",
+          "preserves embedded newlines",
+          "empty input",
+          "rejects ambiguous headers and mismatched rows"
+        ]
+      },
+      {
+        "name": "acceptance",
+        "exitCode": 1,
+        "tests": 16,
+        "passed": 7,
+        "failed": [
+          "empty file and header-only file",
+          "record terminators do not invent a final record",
+          "field whitespace is preserved",
+          "quoted newlines preserve their bytes",
+          "only the leading BOM is stripped",
+          "quotes in unquoted fields are rejected",
+          "characters after closing quote are rejected",
+          "duplicate and empty headers are rejected",
+          "CLI imports a multiline file"
+        ]
+      }
+    ]
+  }
+]

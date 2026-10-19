@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 1,
+  "task": "csv-import-repair",
+  "conclusion": "Current self-driving profile underperformed the fixed Mini baseline on this single task. No arm passed the complete acceptance gate.",
+  "maxProviderRequests": 54,
+  "actualProviderRequests": 36,
+  "allHTTP200": true,
+  "requestKinds": {
+    "generation": 23,
+    "decision": 13
+  },
+  "sameInitialFileHashes": true,
+  "acceptanceHashUnchanged": true,
+  "primaryComparison": [
+    {
+      "id": "fixed-mini",
+      "report": "comparison-1/baseline-live.json",
+      "sessionOutcome": "succeeded",
+      "taskPassed": false,
+      "elapsedMs": 31321.97475,
+      "steps": 11,
+      "requests": {
+        "generation": 11
+      },
+      "generationModels": {
+        "openai/gpt-4.1-mini": 11
+      },
+      "tools": {
+        "read": 6,
+        "edit": 4,
+        "shell": 3
+      },
+      "toolErrors": 0,
+      "generationTokens": {
+        "uncachedInput": 7954,
+        "cacheReadInput": 47488,
+        "cacheWriteInput": 0,
+        "totalInputIncludingCache": 55442,
+        "output": 3170,
+        "reasoning": 0,
+        "messagesWithUsage": 11
+      },
+      "decisionTokens": {
+        "input": 0,
+        "output": 0,
+        "recordsWithUsage": 0
+      },
+      "tests": [
+        {
+          "name": "visible",
+          "exitCode": 0,
+          "tests": 5,
+          "passed": 5,
+          "failed": []
+        },
+        {
+          "name": "acceptance",
+          "exitCode": 1,
+          "tests": 16,
+          "passed": 14,
+          "failed": [
+            "unterminated quoted field is rejected",
+            "special header names are ordinary own properties"
+          ]
+        }
+      ],
+      "immutableFilesIntact": true,
+      "budgetBlocked": 0
+    },
+    {
+      "id": "self-driving-before-fix",
+      "report": "comparison-1/self-driving-live.json",
+      "sessionOutcome": "failed",
+      "taskPassed": false,
+      "elapsedMs": 8639.133542000001,
+      "steps": 6,
+      "requests": {
+        "decision": 6,
+        "generation": 5
+      },
+      "generationModels": {
+        "openai/gpt-4.1-nano": 5
+      },
+      "tools": {
+        "read": 3,
+        "edit": 2,
+        "shell": 1
+      },
+      "toolErrors": 0,
+      "generationTokens": {
+        "uncachedInput": 3088,
+        "cacheReadInput": 8064,
+        "cacheWriteInput": 0,
+        "totalInputIncludingCache": 11152,
+        "output": 679,
+        "reasoning": 0,
+        "messagesWithUsage": 5
+      },
+      "decisionTokens": {
+        "input": 39546,
+        "output": 318,
+        "recordsWithUsage": 6
+      },
+      "tests": [
+        {
+          "name": "visible",
+          "exitCode": 1,
+          "tests": 5,
+          "passed": 1,
+          "failed": [
+            "imports ordinary records",
+            "preserves embedded newlines",
+            "empty input",
+            "rejects ambiguous headers and mismatched rows"
+          ]
+        },
+        {
+          "name": "acceptance",
+          "exitCode": 1,
+          "tests": 16,
+          "passed": 7,
+          "failed": [
+            "empty file and header-only file",
+            "record terminators do not invent a final record",
+            "field whitespace is preserved",
+            "quoted newlines preserve their bytes",
+            "only the leading BOM is stripped",
+            "quotes in unquoted fields are rejected",
+            "characters after closing quote are rejected",
+            "duplicate and empty headers are rejected",
+            "CLI imports a multiline file"
+          ]
+        }
+      ],
+      "immutableFilesIntact": true,
+      "budgetBlocked": 0
+    }
+  ],
+  "diagnosticFollowup": {
+    "id": "self-driving-after-fix",
+    "report": "post-fix/self-driving-live.json",
+    "sessionOutcome": "succeeded",
+    "taskPassed": false,
+    "elapsedMs": 15151.968166999999,
+    "steps": 7,
+    "requests": {
+      "decision": 7,
+      "generation": 7
+    },
+    "generationModels": {
+      "openai/gpt-4o-mini": 5,
+      "openai/gpt-4.1-nano": 2
+    },
+    "tools": {
+      "read": 2,
+      "edit": 4
+    },
+    "toolErrors": 1,
+    "generationTokens": {
+      "uncachedInput": 5216,
+      "cacheReadInput": 11904,
+      "cacheWriteInput": 0,
+      "totalInputIncludingCache": 17120,
+      "output": 1057,
+      "reasoning": 0,
+      "messagesWithUsage": 7
+    },
+    "decisionTokens": {
+      "input": 46922,
+      "output": 371,
+      "recordsWithUsage": 7
+    },
+    "tests": [
+      {
+        "name": "visible",
+        "exitCode": 1,
+        "plannedTests": 5,
+        "executedTests": 0,
+        "passed": 0,
+        "state": "module-load-error",
+        "reason": "Syntax Error in src/csv.ts; no JUnit output emitted by Bun"
+      },
+      {
+        "name": "acceptance",
+        "exitCode": 1,
+        "plannedTests": 16,
+        "executedTests": 0,
+        "passed": 0,
+        "state": "module-load-error",
+        "reason": "Syntax Error in src/csv.ts; acceptance module cannot import task implementation"
+      }
+    ],
+    "immutableFilesIntact": true,
+    "budgetBlocked": 0
+  },
+  "billing": "Total USD savings not established; no physical per-request invoice collected; decision-service cost is not represented in Session catalog cost.",
+  "qualification": "not-qualified",
+  "verification": {
+    "packageTests": 128,
+    "packageAssertions": 433,
+    "repeatedRegressions": 20,
+    "regressionAssertions": 60,
+    "pluginLintWarnings": 0,
+    "pluginLintErrors": 0,
+    "hostCheck": {
+      "checkout": "<qualified-opencode-checkout>",
+      "typecheckTasks": 34,
+      "cachedTasks": 34,
+      "exitCode": 0
+    },
+    "credentialValueScan": {
+      "files": 91,
+      "matches": 0
+    },
+    "postFixSourceAndBundleHashesMatch": true,
+    "controllerRemoved": true
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "name": "review-before-enabling",
+  "backends": {
+    "coding": {
+      "service": "openrouter",
+      "providerID": "openrouter",
+      "auth": { "type": "integration", "integrationID": "openrouter" }
+    }
+  },
+  "decision": {
+    "service": "openrouter",
+    "model": "REPLACE_WITH_PINNED_EVALUATION_MODEL",
+    "allowedResponseModels": ["REPLACE_WITH_ACCEPTED_RESPONSE_MODEL"],
+    "auth": { "type": "integration", "integrationID": "openrouter" },
+    "maxInputBytes": 0,
+    "maxInputTokens": 0
+  },
+  "tiers": {
+    "low": { "backend": "coding", "model": "REPLACE_WITH_LOW_MODEL" },
+    "medium": { "backend": "coding", "model": "REPLACE_WITH_MEDIUM_MODEL" },
+    "high": { "backend": "coding", "model": "REPLACE_WITH_HIGH_MODEL" },
+    "xhigh": { "backend": "coding", "model": "REPLACE_WITH_XHIGH_MODEL" },
+    "max": { "backend": "coding", "model": "REPLACE_WITH_MAX_MODEL" }
+  },
+  "auxiliary": {
+    "title": { "backend": "coding", "model": "REPLACE_WITH_TITLE_MODEL" },
+    "compaction": { "backend": "coding", "model": "REPLACE_WITH_LARGE_COMPACTION_MODEL" },
+    "generate": { "backend": "coding", "model": "REPLACE_WITH_GENERATE_MODEL" }
+  },
+  "outputTokens": 0,
+  "overheadTokens": 0,
+  "preparationTimeoutMs": 0,
+  "evidence": { "mode": "bounded", "maxBytes": 0, "maxTokens": 0 }
+}

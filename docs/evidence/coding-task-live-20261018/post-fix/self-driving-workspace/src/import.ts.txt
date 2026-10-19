@@ -1,0 +1,19 @@
+import { parseCsv } from "./csv"
+
+export function importCsv(text: string): Record<string, string>[] {
+  const rows = parseCsv(text);
+    const headers = rows.shift() || [];
+    if (!headers.length || headers.some(h => !h)) throw new Error('Invalid headers');
+  if (!headers) return []
+  const seenHeaders = new Set();
+    headers.forEach(header => {
+        if (seenHeaders.has(header)) throw new Error('Duplicate header names');
+        seenHeaders.add(header);
+    });
+    return rows.map(row => {
+        if (row.length !== headers.length) {
+            throw new Error('Data row length differs from headers');
+        }
+        return Object.fromEntries(headers.map((header, index) => [header, row[index] || ""]));
+    });
+}

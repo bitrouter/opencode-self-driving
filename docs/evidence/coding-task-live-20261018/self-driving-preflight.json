@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "arm": "self-driving",
+  "mode": "preflight",
+  "planHash": "81d7155bcb14febfc175b8c77d8fd6ed4278bfcbbbb82a654d5af3b7c7fb958b",
+  "state": "ready",
+  "stage": "preflight",
+  "elapsedMs": 0,
+  "steps": 0,
+  "permissionRequests": 0,
+  "toolFailures": 0,
+  "availableTools": [
+    "edit",
+    "read",
+    "shell",
+    "write"
+  ],
+  "routes": [],
+  "tools": [],
+  "requests": [],
+  "budget": {
+    "inputBytes": 0,
+    "responseBytes": 0,
+    "blocked": 0
+  },
+  "messages": [],
+  "fileHashes": {
+    "before": {
+      "README.md": "192a2ef929ce22377d0b2d2eeac43e7200d419eb484ee271aaebad87a76e7a01",
+      "src/csv.ts": "f9fdbd5f939ad0bdf4a88eada362a5b738af9e433a9fc1a509df600ef3b24584",
+      "src/import.ts": "546f17bc50d7d0f7d05126bb06d8f47e1929b913d09d6ae00e7ea641d1aaa651",
+      "src/cli.ts": "30c03926f9cbca76249cf09b1664ca83e7978e888bb729e2deceeffb6b61d58e",
+      "test/csv.test.ts": "d3fe2eddcea38e062aae366ccd7b7c4a7b7a1042773451fa58e27d9012c2d206",
+      "sample.csv": "8531b5894971a7496024dd796598a1a72bd58d01654ec53214a75cd4f3f9c6b6",
+      "invalid.csv": "17a373d8a99cbc0238d1b1b87088915e04040adec99d3605d930099ee4f42df0"
+    },
+    "after": {
+      "README.md": "192a2ef929ce22377d0b2d2eeac43e7200d419eb484ee271aaebad87a76e7a01",
+      "src/csv.ts": "f9fdbd5f939ad0bdf4a88eada362a5b738af9e433a9fc1a509df600ef3b24584",
+      "src/import.ts": "546f17bc50d7d0f7d05126bb06d8f47e1929b913d09d6ae00e7ea641d1aaa651",
+      "src/cli.ts": "30c03926f9cbca76249cf09b1664ca83e7978e888bb729e2deceeffb6b61d58e",
+      "test/csv.test.ts": "d3fe2eddcea38e062aae366ccd7b7c4a7b7a1042773451fa58e27d9012c2d206",
+      "sample.csv": "8531b5894971a7496024dd796598a1a72bd58d01654ec53214a75cd4f3f9c6b6",
+      "invalid.csv": "17a373d8a99cbc0238d1b1b87088915e04040adec99d3605d930099ee4f42df0"
+    }
+  },
+  "quality": "single-task-only; not-qualified",
+  "billing": "not-measured; catalog cost excludes decision service and is not a physical bill"
+}
