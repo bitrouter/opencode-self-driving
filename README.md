@@ -1,44 +1,87 @@
 # opencode-self-driving
 
-OpenCode V2 插件：为每个模型请求选择模型 / reasoning 档位，并提供显式启用的上下文选择与工具审批策略。严格使用现有公开插件 API；Session、工具循环、压缩、重试和结束判断继续由 OpenCode 管理。
+Automatically connect existing OpenCode **2.3.2** model sources to a local
+BitRouter. This first release focuses only on model connectivity and routing:
 
-**状态：实验性，`0.6.0-dev.0`，尚未发布 npm 包。** 本地集成检查已通过，真实 OpenRouter 接入部分通过；当前配置在一次编码任务对照中弱于固定 GPT-4.1 Mini，双方均未通过完整验收。尚不能声明编码质量、概率校准或成本收益合格。
+```text
+Existing OpenCode providers / models / active connections
+  → Generate isolated BitRouter YAML and policy
+  → Register bitrouter/auto and set the project default
+  → Let local BitRouter select, adapt, and forward requests
+```
 
-## 开始使用
+All original models remain manually selectable. OpenCode still owns tools,
+permissions, context, compaction, and sessions. The plugin has no model-selection
+engine, context filtering, automatic approvals, self-learning, or second agent loop.
 
-已验证基线：macOS、Bun **1.4.2**、OpenCode V2 **2.0.32**，源码 commit `501b15af26915ba52682e20e220e7e137e89e92f`。不声明兼容其他 OpenCode 版本。
+## Installation
 
-在本目录链接兼容 OpenCode checkout 的已安装依赖，然后构建与检查：
+Requires Bun **1.4.2**, OpenCode **2.3.2**, and a BitRouter `bro` binary with
+the current router and policy v4 interfaces. The local integration baseline is
+BitRouter **1.0.0-alpha.36**, revision
+`5feee26e714bd58e9a77371d4709e4a24888d5af`. Older CLI versions are not qualified.
 
 ```sh
-bun run dev:link /path/to/dependency-installed/opencode
+bun install --frozen-lockfile
 bun run check
 ```
 
-将构建后的完整目录加入兼容宿主的配置：
+Add the complete built plugin directory to your OpenCode configuration:
 
-```json
+```jsonc
 {
-  "plugins": [{ "package": "/absolute/path/opencode-self-driving" }]
+  "$schema": "https://opencode.ai/config.json",
+  "plugins": [{
+    "package": "/absolute/path/opencode-self-driving",
+    "options": { "command": ["/absolute/path/bro"] }
+  }]
 }
 ```
 
-首次加载保持 `unconfigured`。在 Session 中执行 `/self-driving config`，导入填好的 [profile](examples/profile.json)，审阅并发布，再执行 `/self-driving on`。服务、凭证引用、五档模型、辅助模型和预算都必须明确填写；模板的占位符与零值不能直接运行。
+Omit `options` if `bro` is on your PATH. There are no five-tier model profiles
+or duplicate API keys to configure.
 
-| 命令                       | 用途                                      |
-| -------------------------- | ----------------------------------------- |
-| `/self-driving config`     | 配置、原生模型 / variant 选择、审阅与发布 |
-| `/self-driving on` / `off` | 启用当前 Session，或恢复原模型            |
-| `/self-driving policies`   | 独立设置上下文与审批模式                  |
-| `/self-driving status`     | 查看路由、用量和状态                      |
+**Default-model change:** after successful setup, the connector changes only the
+project's `.opencode/opencode.json(c)` `model` field to `bitrouter/auto`. It
+preserves other fields and JSONC comments and saves the original value in plugin
+storage. If no file exists, it creates `.opencode/opencode.jsonc`. Existing session
+selections and explicit agent or command models are not switched.
+Run **`/bitrouter-restore` before removing the plugin**. Restoration never
+overwrites a later user-selected default.
 
-上下文选择默认 `inherit`，自动审批默认 `off`。原生 AGENTS.md、skills、MCP、CodeMode 和未知资源保留；stateful observer 与插件恢复后置。
+## Sources and boundaries
 
-## 文档与验证
+- **BYOK:** reuse active keys, endpoints, model mappings, and headers.
+- **Subscription:** native OpenAI → Codex, Anthropic → Claude Code, and Copilot
+  adapters. OpenCode alone owns refresh; BitRouter receives temporary access-only
+  snapshots, never refresh tokens.
+- **Local:** Ollama, LM Studio, vLLM, and compatible local HTTP services.
 
-- [文档总览](docs/README.md)：使用、设计、研究和历史归档。
-- [安装与兼容范围](docs/installation.md)、[完整配置 / RPC / 运行机制](docs/configuration.md)。
-- [当前验证状态](docs/validation/README.md)、[真实编码任务对照](docs/validation/coding-task-live.md)。
-- [设计规格](docs/spec.md)、[开发与复跑](docs/development.md)。
+This is not a universal translator for arbitrary provider packages. Unknown
+authentication, external credentials, unsupported body/settings overrides, and
+unknown capacities are reported in `excluded`, not silently replaced with a
+different billing source. Files and routing run on the OpenCode server machine;
+upstream traffic goes to the imported endpoints, not automatically to BitRouter Cloud.
 
-独立仓库仅包含插件及其文档、测试和开发工具。`dist/`、依赖、原始 `artifacts/`、本地数据库和凭证不提交；精简并脱敏的合成实测资料位于 [docs/evidence](docs/evidence/README.md)。
+**Policy limitations:** generated policy is a conservative bootstrap. Imported
+models become candidate actions, initially using the previous default, or the
+first eligible model in stable order if that default is unavailable. No quality
+scores or evaluation certificates are fabricated. A YAML configuration and model
+list alone do not provide task-difficulty-aware routing. Optional `policyFile`
+and `decision` settings connect an evaluated policy and compatible decision
+backend; without those prerequisites, there is no claim of intelligent selection,
+better quality, or cost savings.
+
+## Documentation and verification
+
+- [Configuration, RPC, credentials, and policy](docs/configuration.md)
+- [Installation, restoration, and migration](docs/installation.md)
+- [Development and testing](docs/development.md)
+- [Local verification results](docs/verification.md)
+- [Architecture and boundaries](docs/spec.md)
+- [Historical implementation and failed live runs](docs/archive/v0.6.0/README.md):
+  preserved in their original language, excluded from build and package output.
+
+The npm package is marked `private` and has not been published. Real-account
+connectivity, representative coding quality, and cost benefits are not qualified;
+offline and loopback checks do not establish those outcomes.

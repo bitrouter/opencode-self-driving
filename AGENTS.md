@@ -2,7 +2,9 @@
 
 - Use existing public OpenCode plugin / AI APIs only. Do not modify or import host Core, Server, Protocol, generated client code, or private runtime implementations. SDK is development-only.
 - Core owns Sessions, history, tools, retries, compaction and recovery. Stateful observer and plugin recovery remain deferred.
-- Use Bun 1.4.2 and a compatible dependency-installed OpenCode checkout; see `docs/development.md`. Run `bun run check` from this package. Never edit `dist/` directly.
+- Use Bun 1.4.2 and the pinned public OpenCode 2.3.2 dependencies; see `docs/development.md`. Run `bun run check` from this package. Never edit `dist/` directly.
+- The runtime is a BitRouter connector only: no model-decision engine, context selection, tool approvals or custom LLM adapter. Keep v0.6.0 history out of builds and packages.
+- Default changes are reversible project-only model-field edits. Preserve JSONC comments, unrelated fields and later user edits. Never copy refresh tokens into BitRouter state.
 - Keep credentials and raw artifacts local. Real provider calls require an explicitly authorized, bounded plan; never automatically rerun paid failures.
 - Preserve failed live results. HTTP success, Session completion, local checks, hosted CI and task quality are separate claims.
 - Keep current guides and verification in `docs/`; historical phase snapshots belong in `docs/archive/`. Update links when moving files.

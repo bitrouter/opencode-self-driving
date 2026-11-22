@@ -1,18 +1,10 @@
-# 文档总览
+# Documentation
 
-当前实现为实验性的 `0.6.0-dev.0`。以使用指南描述当前行为，以验证总览判断证据范围；阶段归档保留当时结论和数量，不代表当前完成状态。
-
-| 内容                                          | 文档                               |
-| --------------------------------------------- | ---------------------------------- |
-| 安装、构建、版本与加载                        | [安装与兼容](installation.md)      |
-| TUI、profile、RPC、资源、审批、容量和生命周期 | [配置与运行机制](configuration.md) |
-| 检查、打包、开发依赖与复跑                    | [开发指南](development.md)         |
-| 有界真实服务调用与指标口径                    | [验收工具](qualification.md)       |
-| 已确认设计、边界与剩余范围                    | [设计规格](spec.md)                |
-| 当前测试与真实服务证据                        | [验证总览](validation/README.md)   |
-| 决策概率、confidence、阈值、输入和超时        | [决策研究](research/decisions.md)  |
-| 原生压缩和公开控制能力                        | [压缩调查](research/compaction.md) |
-| 阶段 0–6 的历史实现记录                       | [阶段归档](archive/README.md)      |
-| 精简实测报告、计划、产物与来源哈希            | [实测证据](evidence/README.md)     |
-
-真实编码对照是负向结果：当前配置未优于固定 Mini，双方均未完整通过独立验收。Session succeeded、HTTP 200、本地测试通过和真实任务完成是不同的证据，不互相替代。
+- [Installation and migration](installation.md)
+- [Configuration and operation](configuration.md)
+- [Development and testing](development.md)
+- [Local verification results](verification.md)
+- [Architecture and boundaries](spec.md)
+- [v0.6.0 archive](archive/v0.6.0/README.md): original source, tooling, and
+  complete failed live results. Historical material retains its original language
+  and does not describe the current connector.
