@@ -1,77 +1,33 @@
 {
   "name": "opencode-self-driving",
-  "version": "0.6.0-dev.0",
-  "description": "Self-driving model routing plugin for OpenCode V2",
+  "version": "0.7.0-dev.0",
+  "description": "Automatically connect existing OpenCode models to a local BitRouter",
   "private": true,
+  "type": "module",
+  "packageManager": "bun@1.4.2",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bitrouter/opencode-self-driving.git"
   },
-  "type": "module",
-  "packageManager": "bun@1.4.2",
   "exports": {
-    ".": {
-      "types": "./dist/server.d.ts",
-      "default": "./server.js"
-    },
-    "./server": {
-      "types": "./dist/server.d.ts",
-      "default": "./server.js"
-    },
-    "./rpc": {
-      "types": "./dist/rpc.d.ts",
-      "default": "./rpc.js"
-    },
-    "./tui": {
-      "types": "./dist/tui.d.ts",
-      "default": "./tui.js"
-    }
+    ".": { "types": "./dist/server.d.ts", "default": "./server.js" },
+    "./server": { "types": "./dist/server.d.ts", "default": "./server.js" },
+    "./rpc": { "types": "./dist/rpc.d.ts", "default": "./rpc.js" }
   },
-  "files": [
-    "dist",
-    "server.js",
-    "rpc.js",
-    "tui.js",
-    "examples",
-    "README.md",
-    "docs"
-  ],
+  "files": ["dist", "server.js", "rpc.js", "README.md", "docs/configuration.md", "docs/installation.md"],
   "scripts": {
-    "dev:link": "bun script/link-workspace.ts",
     "typecheck": "tsc --noEmit",
-    "build": "bun run typecheck && bun script/build.ts && bun run build:types",
-    "build:types": "tsc -p tsconfig.build.json",
+    "build": "bun run typecheck && bun script/build.ts && tsc -p tsconfig.build.json",
     "test": "bun script/test.ts",
-    "qualify": "bun script/qualify.ts",
     "check": "bun run build && bun run test",
-    "prepack": "bun run build",
-    "smoke:tui": "bun script/smoke-tui.ts"
+    "prepack": "bun run build"
   },
-  "peerDependencies": {
-    "@opencode/plugin": "2.0.32",
-    "effect": "4.0.1",
-    "@opentui/solid": "0.5.17",
-    "solid-js": "1.9.15"
-  },
-  "peerDependenciesMeta": {
-    "@opentui/solid": {
-      "optional": true
-    },
-    "solid-js": {
-      "optional": true
-    }
-  },
+  "peerDependencies": { "@opencode/plugin": "2.3.2" },
   "devDependencies": {
-    "@ai-sdk/provider": "3.0.8",
-    "@opencode/ai": "2.0.32",
-    "@opencode/plugin": "2.0.32",
-    "@opencode/sdk": "2.0.32",
-    "@opencode/client": "2.0.32",
-    "@opentui/core": "0.5.17",
-    "@opentui/solid": "0.5.17",
-    "solid-js": "1.9.15",
-    "effect": "4.0.1",
-    "@types/bun": "1.4.0",
-    "@typescript/native": "npm:typescript@7.0.2"
+    "jsonc-parser": "3.3.1",
+    "@opencode/plugin": "2.3.2",
+    "@opencode/sdk": "2.3.2",
+    "@types/bun": "1.4.3",
+    "typescript": "npm:@typescript/typescript6@6.0.2"
   }
 }

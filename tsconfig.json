@@ -10,8 +10,6 @@
     "noEmit": true,
     "resolveJsonModule": true,
     "verbatimModuleSyntax": true,
-    "jsx": "preserve",
-    "jsxImportSource": "@opentui/solid",
     "noUncheckedIndexedAccess": false
   },
   "include": ["src", "script", "test"]
